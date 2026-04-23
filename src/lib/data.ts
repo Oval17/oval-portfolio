@@ -4,7 +4,7 @@ export const personal = {
   tagline: "Engineer. I write code (or do I?). 24hrs is never enough.",
   email: "oval17.contact@gmail.com",
   location: "India",
-  bio: "I build things for the web. Currently working as an SDE Intern at TELUS Digital AI while exploring systems, UI, and everything in between.",
+  bio: "SDE Intern @ TELUS Digital AI. GSoC 2024.\nI write code (or do I?). 24hrs is never enough.",
   social: {
     github: "https://github.com/Oval17",
     twitter: "https://x.com/Oval170",

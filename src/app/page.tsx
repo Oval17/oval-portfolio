@@ -1,3 +1,4 @@
+import Nav from "@/components/nav";
 import Hero from "@/components/hero";
 import About from "@/components/about";
 import Experience from "@/components/experience";
@@ -9,11 +10,16 @@ import Dock from "@/components/dock";
 export default function Home() {
   return (
     <>
-      <main className="max-w-xl mx-auto px-6 pt-16 pb-32">
+      <Nav />
+      <main className="max-w-2xl mx-auto px-6 pt-8 pb-32">
         <Hero />
-        <About />
+        <div id="about" className="pt-10">
+          <About />
+        </div>
         <Experience />
-        <Projects />
+        <div id="projects">
+          <Projects />
+        </div>
         <Skills />
         <Footer />
       </main>
