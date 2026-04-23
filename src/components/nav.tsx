@@ -1,50 +1,40 @@
-"use client";
-
-import { motion } from "motion/react";
 import Link from "next/link";
+import ThemeToggle from "./theme-toggle";
 
 const links = [
-  { label: "about", href: "#about" },
-  { label: "work", href: "#experience" },
-  { label: "projects", href: "#projects" },
+  { label: "Work", href: "/work" },
+  { label: "Blog", href: "/blog" },
+  { label: "About", href: "/about" },
 ];
 
 export default function Nav() {
   return (
-    <motion.header
-      initial={{ opacity: 0, y: -8 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50"
-    >
-      <div
-        className="absolute inset-0"
-        style={{
-          backdropFilter: "blur(12px)",
-          WebkitBackdropFilter: "blur(12px)",
-          backgroundColor: "rgba(13,13,13,0.7)",
-          borderBottom: "1px solid rgba(255,255,255,0.04)",
-        }}
-      />
-      <nav className="relative max-w-2xl mx-auto px-6 h-14 flex items-center justify-between">
+    <header>
+      <nav className="max-w-2xl mx-auto px-6 h-14 flex items-center justify-between">
         <Link
           href="/"
-          className="text-sm font-medium text-[#e8e8e8] hover:text-white transition-colors"
+          className="text-sm font-bold tracking-tight transition-colors hover:opacity-80"
+          style={{ color: "var(--text-1)", fontFamily: "var(--font-geist-mono)" }}
         >
-          oval
+          Anurag
         </Link>
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-5">
           {links.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-[#888] hover:text-[#e8e8e8] transition-colors"
+              className="text-sm transition-colors hover:opacity-90"
+              style={{ color: "var(--text-2)" }}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
+          <ThemeToggle />
         </div>
       </nav>
-    </motion.header>
+      <div className="max-w-2xl mx-auto px-6">
+        <div style={{ height: "1px", background: "var(--border)" }} />
+      </div>
+    </header>
   );
 }

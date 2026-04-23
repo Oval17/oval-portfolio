@@ -5,6 +5,24 @@
   --font-mono: var(--font-geist-mono);
 }
 
+:root {
+  --bg: #ffffff;
+  --surface: #f4f4f5;
+  --border: rgba(0, 0, 0, 0.08);
+  --text-1: #111111;
+  --text-2: #555555;
+  --text-3: #999999;
+}
+
+:root[class~="dark"] {
+  --bg: #0f1117;
+  --surface: #161b22;
+  --border: rgba(255, 255, 255, 0.07);
+  --text-1: #f0f4f8;
+  --text-2: #8b949e;
+  --text-3: #484f58;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -14,15 +32,15 @@ html {
 }
 
 body {
-  background-color: #0d0d0d;
-  color: #e8e8e8;
+  background-color: var(--bg);
+  color: var(--text-1);
   font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 ::selection {
-  background: rgba(232, 232, 232, 0.12);
+  background: rgba(100, 120, 255, 0.15);
 }
 
 ::-webkit-scrollbar {
@@ -34,6 +52,6 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2a2a2a;
+  background: var(--border);
   border-radius: 2px;
 }
