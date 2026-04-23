@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git pull *)",
+      "Bash(git checkout *)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-turbopack --yes)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-turbopack --yes --force)",
+      "Bash(mkdir -p /tmp/oval-backup)",
+      "Bash(cp README.md /tmp/oval-backup/)",
+      "Bash(cp /tmp/oval-backup/README.md .)",
+      "Bash(cp README.md /tmp/oval-readme-backup.md)",
+      "Bash(cp /tmp/oval-readme-backup.md README.md)",
+      "Bash(npm install *)",
+      "Bash(gh repo *)",
+      "Bash(gh pr create --title 'feat: portfolio v1 — Next.js 15, Tailwind CSS 4, Motion' --body ' *)",
+      "Bash(lsof -ti:3000)",
+      "Bash(xargs kill *)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(git stash *)",
+      "Bash(git commit --amend -m ' *)",
+      "Read(//Users/anuragsingh/Desktop/**)"
+    ],
+    "additionalDirectories": [
+      "/Users/anuragsingh/Desktop",
+      "/Users/anuragsingh/Desktop/oval-portfolio/src/app/work"
+    ]
+  }
+}

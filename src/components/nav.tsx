@@ -1,34 +1,27 @@
 import Link from "next/link";
 
+const links = [
+  { label: "Home", href: "/" },
+  { label: "Work", href: "/work" },
+  { label: "Blog", href: "/blog" },
+  { label: "Resume", href: "/resume" },
+];
+
 export default function Nav() {
   return (
-    <header>
-      <nav className="flex items-center justify-between px-6 py-4">
-        <Link
-          href="/"
-          className="text-base font-bold tracking-tight"
-          style={{ color: "#e8e8e8", fontFamily: "var(--font-geist-mono)" }}
-        >
-          Anurag
-        </Link>
-        <div className="flex items-center gap-6">
-          <a
-            href="#projects"
-            className="text-sm hover:text-[#e8e8e8] transition-colors"
+    <header className="px-6 py-5">
+      <nav className="max-w-2xl mx-auto flex items-center justify-center sm:justify-start gap-8">
+        {links.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="text-sm transition-colors hover:text-[#e8e8e8]"
             style={{ color: "#666" }}
           >
-            Projects
-          </a>
-          <a
-            href="#about"
-            className="text-sm hover:text-[#e8e8e8] transition-colors"
-            style={{ color: "#666" }}
-          >
-            About
-          </a>
-        </div>
+            {link.label}
+          </Link>
+        ))}
       </nav>
-      <div style={{ height: "1px", background: "rgba(255,255,255,0.07)" }} />
     </header>
   );
 }

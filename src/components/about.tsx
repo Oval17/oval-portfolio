@@ -1,25 +1,34 @@
 export default function About() {
   return (
-    <section className="mb-12">
-      <h2 className="text-base font-semibold mb-3" style={{ color: "#e8e8e8" }}>
-        about
+    <section id="about" className="py-8">
+      <h2 className="text-xs font-medium tracking-widest uppercase mb-4" style={{ color: "#444" }}>
+        About
       </h2>
-      <div className="space-y-3 text-sm leading-relaxed" style={{ color: "#888" }}>
-        <p>tldr; learnt by hacking around on the internet.</p>
-        <p>I like technology. Writing code, breaking things, and figuring out how they work.</p>
-        <p>Currently an SDE Intern at TELUS Digital AI. Previously GSoC 2024 with SugarLabs.</p>
-        <p>I build things — from C-based tools close to the metal, to 3D web apps with Three.js. Whatever the problem calls for.</p>
-        <p>Also on YouTube{" "}
+      <div className="space-y-3 text-sm leading-[1.8]" style={{ color: "#777" }}>
+        <p>
+          I&apos;m Anurag — an engineer who got into code by breaking things and slowly figuring out how to put them back together.
+          That&apos;s still more or less how I work.
+        </p>
+        <p>
+          I like working across the stack. Sometimes that means writing C close to the metal, sometimes it&apos;s building 3D interfaces with WebGL, sometimes it&apos;s gluing AI tools together. The thread is curiosity, not the language.
+        </p>
+        <p>
+          Right now I&apos;m an SDE Intern at{" "}
+          <span style={{ color: "#aaa" }}>TELUS Digital AI</span>, building things on the developer side of AI products.
+          Before that I spent a summer with{" "}
+          <span style={{ color: "#aaa" }}>Google Summer of Code 2024</span> contributing to open-source education software.
+        </p>
+        <p>
+          Outside of work I make videos on{" "}
           <a
             href="https://youtube.com/@ovalcodes"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline underline-offset-2"
-            style={{ color: "#aaa", textDecorationColor: "#333" }}
+            style={{ color: "#aaa", textDecoration: "underline", textDecorationColor: "#333", textUnderlineOffset: "3px" }}
           >
-            @ovalcodes
+            YouTube
           </a>{" "}
-          when I have something worth sharing.
+          when something is worth documenting, and I&apos;m trying to write more — which is why the blog section exists.
         </p>
       </div>
     </section>
