@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { personal } from "@/lib/data";
 
@@ -43,15 +44,16 @@ const socials = [
 export default function Hero() {
   return (
     <>
-      <section className="py-10">
+      <section className="py-8">
         <div className="flex items-center gap-6 sm:gap-8">
-          <div className="relative flex-shrink-0">
+          {/* Profile photo — fully circular */}
+          <div className="flex-shrink-0 w-[88px] h-[88px] rounded-full overflow-hidden" style={{ outline: "2px solid var(--border)" }}>
             <Image
               src="/avatar.png"
               alt="Anurag"
-              width={96}
-              height={96}
-              className="rounded-full"
+              width={88}
+              height={88}
+              className="w-full h-full object-cover"
               style={{ imageRendering: "pixelated" }}
               priority
             />
@@ -59,13 +61,16 @@ export default function Hero() {
 
           <div className="flex-1 min-w-0">
             <h1
-              className="text-xl sm:text-2xl font-bold mb-1"
-              style={{ color: "#e8e8e8", letterSpacing: "-0.01em" }}
+              className="text-xl sm:text-2xl font-bold mb-1.5 leading-tight"
+              style={{ color: "var(--text-1)", fontFamily: "var(--font-geist-mono)", letterSpacing: "-0.01em" }}
             >
               Hi, I&apos;m{" "}
-              <span style={{ fontFamily: "var(--font-geist-mono)" }}>@{personal.handle}</span>
+              <span>@{personal.handle}.</span>
             </h1>
-            <p className="text-sm leading-relaxed mb-4" style={{ color: "#666" }}>
+            <p
+              className="text-sm leading-relaxed mb-4"
+              style={{ color: "var(--text-2)", fontFamily: "var(--font-geist-mono)" }}
+            >
               {personal.tagline}
             </p>
             <div className="flex items-center gap-4">
@@ -76,8 +81,10 @@ export default function Hero() {
                   target={href.startsWith("mailto") ? undefined : "_blank"}
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="hover:text-[#e8e8e8] transition-colors"
-                  style={{ color: "#555" }}
+                  className="transition-colors"
+                  style={{ color: "var(--text-3)" }}
+                  onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "var(--text-1)")}
+                  onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "var(--text-3)")}
                 >
                   {svg}
                 </a>
@@ -86,8 +93,7 @@ export default function Hero() {
           </div>
         </div>
       </section>
-
-      <div style={{ height: "1px", background: "rgba(255,255,255,0.07)" }} />
+      <div style={{ height: "1px", background: "var(--border)" }} />
     </>
   );
 }

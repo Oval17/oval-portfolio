@@ -1,27 +1,40 @@
 import Link from "next/link";
+import ThemeToggle from "./theme-toggle";
 
 const links = [
-  { label: "Home", href: "/" },
   { label: "Work", href: "/work" },
   { label: "Blog", href: "/blog" },
-  { label: "Resume", href: "/resume" },
+  { label: "About", href: "/about" },
 ];
 
 export default function Nav() {
   return (
-    <header className="px-6 py-5">
-      <nav className="max-w-2xl mx-auto flex items-center justify-center sm:justify-start gap-8">
-        {links.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className="text-sm transition-colors hover:text-[#e8e8e8]"
-            style={{ color: "#666" }}
-          >
-            {link.label}
-          </Link>
-        ))}
+    <header>
+      <nav className="max-w-2xl mx-auto px-6 h-14 flex items-center justify-between">
+        <Link
+          href="/"
+          className="text-sm font-bold tracking-tight transition-colors hover:opacity-80"
+          style={{ color: "var(--text-1)", fontFamily: "var(--font-geist-mono)" }}
+        >
+          Anurag
+        </Link>
+        <div className="flex items-center gap-5">
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-sm transition-colors hover:opacity-90"
+              style={{ color: "var(--text-2)" }}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <ThemeToggle />
+        </div>
       </nav>
+      <div className="max-w-2xl mx-auto px-6">
+        <div style={{ height: "1px", background: "var(--border)" }} />
+      </div>
     </header>
   );
 }
