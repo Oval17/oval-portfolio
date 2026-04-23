@@ -1,72 +1,47 @@
-"use client";
-
-import { motion } from "motion/react";
-import { useInView } from "motion/react";
-import { useRef } from "react";
 import { experience } from "@/lib/data";
 
-export default function Experience() {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
+const logoColors: Record<string, { bg: string; text: string }> = {
+  "TELUS Digital AI": { bg: "#4B3F72", text: "#c9b8ff" },
+  "Google Summer of Code": { bg: "#1a3a2a", text: "#5fcf8a" },
+};
 
+export default function Experience() {
   return (
-    <section id="experience" className="py-20 px-6">
-      <div className="max-w-2xl mx-auto">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 16 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, ease: "easeOut" as const }}
-        >
-          <p className="text-xs font-medium tracking-widest uppercase text-[#555] mb-8">
-            experience
-          </p>
-          <div className="space-y-px">
-            {experience.map((job, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 12 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{
-                  duration: 0.4,
-                  ease: "easeOut" as const,
-                  delay: i * 0.1,
-                }}
-                className="group py-5 border-b border-white/[0.05] last:border-none"
+    <section className="mb-12">
+      <h2 className="text-base font-semibold mb-4" style={{ color: "#e8e8e8" }}>
+        cool places I worked at
+      </h2>
+      <div className="space-y-4">
+        {experience.map((job, i) => {
+          const colors = logoColors[job.company] || { bg: "#1a1a1a", text: "#888" };
+          const initials = job.company
+            .split(" ")
+            .slice(0, 2)
+            .map((w) => w[0])
+            .join("");
+          return (
+            <div key={i} className="flex items-center gap-4">
+              <div
+                className="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-bold"
+                style={{ background: colors.bg, color: colors.text }}
               >
-                <div className="flex items-start justify-between gap-4 mb-2">
-                  <div>
-                    <h3 className="text-sm font-medium text-[#e8e8e8]">
-                      {job.role}
-                    </h3>
-                    <p className="text-sm text-[#666] mt-0.5">
-                      {job.company}
-                      {job.org && (
-                        <span className="text-[#555]"> · {job.org}</span>
-                      )}
-                    </p>
-                  </div>
-                  <span className="text-xs text-[#555] whitespace-nowrap font-mono pt-0.5">
-                    {job.period}
-                  </span>
-                </div>
-                <p className="text-sm text-[#666] leading-relaxed mb-3">
-                  {job.description}
+                {initials}
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-medium" style={{ color: "#e0e0e0" }}>
+                  {job.company}
                 </p>
-                <div className="flex flex-wrap gap-1.5">
-                  {job.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs px-2 py-0.5 rounded-md text-[#666] bg-white/[0.04] border border-white/[0.06]"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+                <p className="text-xs mt-0.5" style={{ color: "#555" }}>
+                  {job.role.toLowerCase()}
+                  {job.org ? ` · ${job.org}` : ""}
+                </p>
+              </div>
+              <span className="text-xs flex-shrink-0 font-mono" style={{ color: "#444" }}>
+                {job.period}
+              </span>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

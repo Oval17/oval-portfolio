@@ -1,30 +1,23 @@
-import Nav from "@/components/nav";
 import Hero from "@/components/hero";
 import About from "@/components/about";
 import Experience from "@/components/experience";
 import Projects from "@/components/projects";
+import Skills from "@/components/skills";
 import Footer from "@/components/footer";
+import Dock from "@/components/dock";
 
 export default function Home() {
   return (
     <>
-      <Nav />
-      <main>
+      <main className="max-w-xl mx-auto px-6 pt-16 pb-32">
         <Hero />
-        <div className="max-w-2xl mx-auto px-6">
-          <div style={{ height: "1px", background: "rgba(255,255,255,0.05)" }} />
-        </div>
         <About />
-        <div className="max-w-2xl mx-auto px-6">
-          <div style={{ height: "1px", background: "rgba(255,255,255,0.05)" }} />
-        </div>
         <Experience />
-        <div className="max-w-2xl mx-auto px-6">
-          <div style={{ height: "1px", background: "rgba(255,255,255,0.05)" }} />
-        </div>
         <Projects />
+        <Skills />
+        <Footer />
       </main>
-      <Footer />
+      <Dock />
     </>
   );
 }
