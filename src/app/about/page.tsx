@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Nav from "@/components/nav";
-import { personal, experience, skills } from "@/lib/data";
+import { personal, experience, techStack } from "@/lib/data";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -53,10 +53,10 @@ export default function AboutPage() {
           {/* Stack */}
           <h2 className="text-xs font-medium tracking-widest uppercase mb-4" style={{ color: "var(--text-3)" }}>Stack</h2>
           <div className="flex flex-wrap gap-2">
-            {skills.map((skill) => (
-              <span key={skill} className="text-xs px-2.5 py-1 rounded-md font-mono"
+            {techStack.map((t) => (
+              <span key={t.name} className="text-xs px-2.5 py-1 rounded-md font-mono"
                 style={{ background: "var(--surface)", color: "var(--text-2)", border: "1px solid var(--border)" }}>
-                {skill}
+                {t.name}
               </span>
             ))}
           </div>

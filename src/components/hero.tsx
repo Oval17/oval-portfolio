@@ -2,12 +2,14 @@
 import Image from "next/image";
 import { personal } from "@/lib/data";
 
+const VIOLET = "#a78bfa";
+
 const socials = [
   {
     label: "GitHub",
     href: personal.social.github,
     svg: (
-      <svg viewBox="0 0 24 24" fill="currentColor" width={18} height={18}>
+      <svg viewBox="0 0 24 24" fill="currentColor" width={19} height={19}>
         <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
       </svg>
     ),
@@ -16,7 +18,7 @@ const socials = [
     label: "X",
     href: personal.social.twitter,
     svg: (
-      <svg viewBox="0 0 24 24" fill="currentColor" width={15} height={15}>
+      <svg viewBox="0 0 24 24" fill="currentColor" width={17} height={17}>
         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.73-8.835L1.254 2.25H8.08l4.713 5.961zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
       </svg>
     ),
@@ -25,7 +27,7 @@ const socials = [
     label: "YouTube",
     href: personal.social.youtube,
     svg: (
-      <svg viewBox="0 0 24 24" fill="currentColor" width={18} height={18}>
+      <svg viewBox="0 0 24 24" fill="currentColor" width={20} height={20}>
         <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
       </svg>
     ),
@@ -34,7 +36,7 @@ const socials = [
     label: "Email",
     href: personal.social.email,
     svg: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} width={18} height={18}>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.7} width={19} height={19}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
       </svg>
     ),
@@ -46,11 +48,13 @@ export default function Hero() {
     <>
       <section className="py-8">
         <div className="flex items-center gap-6 sm:gap-8">
-          {/* Profile photo — fully circular */}
-          <div className="flex-shrink-0 w-[88px] h-[88px] rounded-full overflow-hidden" style={{ outline: "2px solid var(--border)" }}>
+          <div
+            className="flex-shrink-0 w-[88px] h-[88px] rounded-full overflow-hidden"
+            style={{ outline: "2px solid rgba(167,139,250,0.3)" }}
+          >
             <Image
               src="/avatar.png"
-              alt="Anurag"
+              alt="Anurag Singh"
               width={88}
               height={88}
               className="w-full h-full object-cover"
@@ -61,17 +65,11 @@ export default function Hero() {
 
           <div className="flex-1 min-w-0">
             <h1
-              className="text-xl sm:text-2xl font-bold leading-tight"
+              className="text-xl sm:text-2xl font-bold leading-tight mb-1"
               style={{ color: "var(--text-1)", fontFamily: "var(--font-geist-mono)", letterSpacing: "-0.01em" }}
             >
-              Hi, I&apos;m @{personal.handle}.
+              Hi, I am Anurag Singh
             </h1>
-            <p
-              className="text-sm font-semibold mt-0.5 mb-2"
-              style={{ color: "var(--text-2)" }}
-            >
-              Anurag Singh
-            </p>
             <p
               className="text-sm leading-relaxed mb-4"
               style={{ color: "var(--text-2)", fontFamily: "var(--font-geist-mono)" }}
@@ -86,10 +84,8 @@ export default function Hero() {
                   target={href.startsWith("mailto") ? undefined : "_blank"}
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="transition-colors"
-                  style={{ color: "var(--text-3)" }}
-                  onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "var(--text-1)")}
-                  onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "var(--text-3)")}
+                  className="transition-all duration-150 hover:opacity-70"
+                  style={{ color: VIOLET }}
                 >
                   {svg}
                 </a>

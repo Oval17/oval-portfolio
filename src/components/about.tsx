@@ -6,17 +6,15 @@ export default function About() {
       {/* Bio */}
       <div className="space-y-4 text-sm leading-[1.8] mb-10" style={{ color: "var(--text-2)", fontFamily: "var(--font-geist-mono)" }}>
         <p>
-          Chronically online, perpetually curious. Most hours go into writing code, reviewing code,
+          Chronically online. Most hours go into writing code, reviewing code,
           breaking things, and occasionally shipping something that actually works.
         </p>
         <p>
-          I live mostly in TypeScript and JavaScript, but hardware pulls me in too —
-          IoT, Raspberry Pi, things that blink and beep. Lately deep in AI and agentic systems,
-          which feels like the most interesting corner of software right now. Building things that
-          think, not just things that run.
+          I live mostly in TypeScript and JavaScript, but hardware pulls me in too
+          IoT, Raspberry Pi. Lately deep in AI and agentic systems.
         </p>
         <p>
-          Away from the screen: cricket and long walks. Balance, or something like it.
+          Away from the screen: cricket and long walks.
         </p>
       </div>
 
@@ -32,7 +30,7 @@ export default function About() {
                 {job.period}
               </p>
             </div>
-            <p className="text-xs mb-2 font-mono" style={{ color: "var(--text-3)" }}>
+            <p className="text-xs mb-2 font-mono font-semibold" style={{ color: "var(--text-2)" }}>
               {job.role}
             </p>
             <p className="text-sm leading-relaxed" style={{ color: "var(--text-2)" }}>
