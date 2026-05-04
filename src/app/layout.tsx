@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Anurag", url: "https://github.com/Oval17" }],
   twitter: { card: "summary", creator: "@Oval170" },
   icons: {
-    icon: "/avatar.png",
+    icon: "/favicon.svg",
   },
 };
 

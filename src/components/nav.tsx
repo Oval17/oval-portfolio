@@ -27,7 +27,7 @@ export default function Nav() {
             className="text-sm font-semibold transition-opacity hover:opacity-70"
             style={{ color: "var(--text-1)" }}
           >
-            Builds
+            My Lab
           </Link>
           {mounted && (
             <button

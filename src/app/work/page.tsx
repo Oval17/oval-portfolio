@@ -5,7 +5,7 @@ import { projects } from "@/lib/data";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Builds — Anurag",
+  title: "My Lab — Anurag",
   description: "Everything I'm working on — projects, experiments, startups.",
 };
 
@@ -16,10 +16,10 @@ export default function WorkPage() {
       <main className="max-w-2xl mx-auto px-6 pb-8">
         <div className="py-10">
           <h1 className="text-2xl font-bold mb-2" style={{ color: "var(--text-1)", letterSpacing: "-0.02em" }}>
-            Builds
+            My Lab
           </h1>
           <p className="text-sm mb-10" style={{ color: "var(--text-2)" }}>
-            Everything I&apos;m working on — projects, experiments, startups, and whatever else grabs me.
+            Everything I am building — projects, experiments, startups, and whatever else grabs me.
           </p>
 
           <div>

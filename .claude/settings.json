@@ -23,7 +23,9 @@
       "Bash(git stash *)",
       "Bash(git commit --amend -m ' *)",
       "Read(//Users/anuragsingh/Desktop/**)",
-      "Bash(git rm *)"
+      "Bash(git rm *)",
+      "Bash(sed -i '' 's/title: \"Builds — Anurag\"/title: \"My Lab — Anurag\"/' /Users/anuragsingh/Desktop/oval-portfolio/src/app/work/page.tsx)",
+      "Bash(sed -i '' 's/Everything I.* — projects, experiments, startups, and whatever else grabs me./Everything I am building — projects, experiments, startups, and whatever else grabs me./' /Users/anuragsingh/Desktop/oval-portfolio/src/app/work/page.tsx)"
     ],
     "additionalDirectories": [
       "/Users/anuragsingh/Desktop",
