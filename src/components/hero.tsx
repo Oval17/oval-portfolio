@@ -61,12 +61,17 @@ export default function Hero() {
 
           <div className="flex-1 min-w-0">
             <h1
-              className="text-xl sm:text-2xl font-bold mb-1.5 leading-tight"
+              className="text-xl sm:text-2xl font-bold leading-tight"
               style={{ color: "var(--text-1)", fontFamily: "var(--font-geist-mono)", letterSpacing: "-0.01em" }}
             >
-              Hi, I&apos;m{" "}
-              <span>@{personal.handle}.</span>
+              Hi, I&apos;m @{personal.handle}.
             </h1>
+            <p
+              className="text-sm font-semibold mt-0.5 mb-2"
+              style={{ color: "var(--text-2)" }}
+            >
+              Anurag Singh
+            </p>
             <p
               className="text-sm leading-relaxed mb-4"
               style={{ color: "var(--text-2)", fontFamily: "var(--font-geist-mono)" }}

@@ -16,7 +16,7 @@ export default function Nav() {
           className="text-sm font-bold tracking-tight transition-colors hover:opacity-80"
           style={{ color: "var(--text-1)", fontFamily: "var(--font-geist-mono)" }}
         >
-          Anurag
+          Oval
         </Link>
         <div className="flex items-center gap-5">
           {links.map((link) => (
