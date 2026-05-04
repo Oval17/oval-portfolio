@@ -5,34 +5,47 @@ const VIOLET = "#a78bfa";
 export default function About() {
   return (
     <section className="py-8">
-      <div className="space-y-4 text-sm leading-[1.8] mb-10" style={{ color: "var(--text-2)", fontFamily: "var(--font-geist-mono)" }}>
+      {/* Bio */}
+      <div className="space-y-3 text-sm leading-[1.8] mb-10" style={{ color: "var(--text-2)", fontFamily: "var(--font-geist-mono)" }}>
         <p>
           Chronically online. Most hours go into writing code, reviewing code,
           breaking things, and occasionally shipping something that actually works.
         </p>
         <p>
-          I live mostly in TypeScript and JavaScript, but hardware pulls me in too —
-          IoT, Raspberry Pi. Lately deep in AI and agentic systems.
+          Lately deep in AI and agentic systems.
         </p>
         <p>
           Away from the screen: cricket and long walks.
         </p>
       </div>
 
-      <div className="space-y-7">
+      {/* Experience */}
+      <div className="space-y-8">
         {experience.map((job, i) => (
           <div key={i}>
             <div className="flex items-baseline justify-between mb-1">
-              <p className="text-sm font-semibold" style={{ color: "var(--text-1)" }}>
+              <p className="text-base font-semibold" style={{ color: "var(--text-1)" }}>
                 {job.company}
               </p>
-              <p className="text-xs font-mono font-medium" style={{ color: VIOLET }}>
+              <p className="text-sm font-mono font-medium" style={{ color: VIOLET }}>
                 {job.period}
               </p>
             </div>
-            <p className="text-xs mb-2 font-mono font-semibold" style={{ color: "var(--text-2)" }}>
-              {job.role}
-            </p>
+            <div className="flex items-center gap-2 mb-2">
+              <p className="text-sm font-mono font-semibold" style={{ color: "var(--text-2)" }}>
+                {job.role}
+              </p>
+              <span
+                className="text-xs px-1.5 py-0.5 rounded font-mono"
+                style={{
+                  background: "rgba(167,139,250,0.1)",
+                  color: VIOLET,
+                  border: "1px solid rgba(167,139,250,0.2)",
+                }}
+              >
+                {job.type}
+              </span>
+            </div>
             <p className="text-sm leading-relaxed" style={{ color: "var(--text-2)" }}>
               {job.description}
             </p>

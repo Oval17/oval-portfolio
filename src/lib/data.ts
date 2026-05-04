@@ -17,6 +17,7 @@ export const experience = [
   {
     company: "TELUS Digital AI",
     role: "SDE Intern",
+    type: "Hybrid",
     period: "Jul 2025 — Present",
     description:
       "Building internal tools and AI-powered developer products. Working across the stack with TypeScript and Node.js.",
@@ -24,6 +25,7 @@ export const experience = [
   {
     company: "Google Summer of Code '26",
     role: "Open Source Contributor · Learning Unlimited",
+    type: "Remote",
     period: "May 2026 — Aug 2026",
     description:
       "Selected to bootstrap and overhaul the frontend theming system — improving UI consistency, upgrading the component architecture, and modernising the overall frontend stack.",
@@ -31,6 +33,7 @@ export const experience = [
   {
     company: "Google Summer of Code '24",
     role: "Open Source Contributor · SugarLabs",
+    type: "Remote",
     period: "May 2024 — Aug 2024",
     description:
       "Worked on Sugar, SugarLabs' flagship education platform — porting and improving the experience on Raspberry Pi.",
