@@ -1,5 +1,5 @@
 export const personal = {
-  name: "Anurag",
+  name: "Anurag Singh",
   handle: "oval",
   tagline: "Engineer. I write code (or do I?). 24hrs is never enough.",
   email: "oval17.contact@gmail.com",
@@ -17,16 +17,26 @@ export const experience = [
   {
     company: "TELUS Digital AI",
     role: "SDE Intern",
+    type: "Hybrid",
     period: "Jul 2025 — Present",
     description:
-      "Building internal tools and AI-powered developer products. Working across the stack — TypeScript, Node.js, and a bunch of Claude.",
+      "Building internal tools and AI-powered developer products. Working across the stack with TypeScript and Node.js.",
   },
   {
-    company: "Google Summer of Code",
-    role: "Open Source Contributor · SugarLabs",
-    period: "May 2024 — Jul 2024",
+    company: "Google Summer of Code '26",
+    role: "Open Source Contributor · Learning Unlimited",
+    type: "Remote",
+    period: "May 2026 — Aug 2026",
     description:
-      "Contributed to open-source education software as part of GSoC 2024 under SugarLabs.",
+      "Selected to bootstrap and overhaul the frontend theming system — improving UI consistency, upgrading the component architecture, and modernising the overall frontend stack.",
+  },
+  {
+    company: "Google Summer of Code '24",
+    role: "Open Source Contributor · SugarLabs",
+    type: "Remote",
+    period: "May 2024 — Aug 2024",
+    description:
+      "Worked on Sugar, SugarLabs' flagship education platform — porting and improving the experience on Raspberry Pi.",
   },
 ];
 
@@ -85,15 +95,21 @@ Small footprint, no framework dependencies, drop-in script tag usage.`,
   },
 ];
 
-export const skills = [
-  "TypeScript",
-  "JavaScript",
-  "Python",
-  "C",
-  "C++",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Three.js",
-  "Claude AI",
+export const techStack = [
+  { name: "TypeScript", icon: "SiTypescript", color: "#3178c6" },
+  { name: "JavaScript", icon: "SiJavascript", color: "#f7df1e" },
+  { name: "Python", icon: "SiPython", color: "#3776ab" },
+  { name: "React", icon: "SiReact", color: "#61dafb" },
+  { name: "Next.js", icon: "SiNextdotjs", color: "#ffffff" },
+  { name: "Node.js", icon: "SiNodedotjs", color: "#339933" },
+  { name: "TailwindCSS", icon: "SiTailwindcss", color: "#06b6d4" },
+  { name: "Three.js", icon: "SiThreedotjs", color: "#ffffff" },
+  { name: "C", icon: "SiC", color: "#a8b9cc" },
+  { name: "C++", icon: "SiCplusplus", color: "#00599c" },
+  { name: "Raspberry Pi", icon: "SiRaspberrypi", color: "#a22846" },
+  { name: "Arduino", icon: "SiArduino", color: "#00979d" },
+  { name: "Git", icon: "SiGit", color: "#f05032" },
+  { name: "Linux", icon: "SiLinux", color: "#fcc624" },
+  { name: "PostgreSQL", icon: "SiPostgresql", color: "#4169e1" },
+  { name: "MongoDB", icon: "SiMongodb", color: "#47a248" },
 ];
