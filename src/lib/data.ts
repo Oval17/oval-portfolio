@@ -8,7 +8,7 @@ export const personal = {
     github: "https://github.com/Oval17",
     twitter: "https://x.com/Oval170",
     youtube: "https://youtube.com/@ovalcodes",
-    instagram: "https://instagram.com/oval.codess",
+    instagram: "https://www.instagram.com/oval.codess/",
     email: "mailto:oval17.contact@gmail.com",
   },
 };
@@ -23,7 +23,7 @@ export const experience = [
       "Building internal tools and AI-powered developer products. Working across the stack with TypeScript and Node.js.",
   },
   {
-    company: "Google Summer of Code '26",
+    company: "GSoC '26",
     role: "Open Source Contributor · Learning Unlimited",
     type: "Remote",
     period: "May 2026 — Aug 2026",
@@ -31,7 +31,7 @@ export const experience = [
       "Selected to bootstrap and overhaul the frontend theming system — improving UI consistency, upgrading the component architecture, and modernising the overall frontend stack.",
   },
   {
-    company: "Google Summer of Code '24",
+    company: "GSoC '24",
     role: "Open Source Contributor · SugarLabs",
     type: "Remote",
     period: "May 2024 — Aug 2024",
