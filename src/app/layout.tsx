@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Anurag", url: "https://github.com/Oval17" }],
   twitter: { card: "summary", creator: "@Oval170" },
   icons: {
-    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>",
+    icon: "/avatar.png",
   },
 };
 

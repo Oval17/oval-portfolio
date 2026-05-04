@@ -1,24 +1,25 @@
 import Link from "next/link";
 import Nav from "@/components/nav";
+import Footer from "@/components/footer";
 import { projects } from "@/lib/data";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Work — Anurag",
-  description: "Things I've built.",
+  title: "Builds — Anurag",
+  description: "Everything I'm working on — projects, experiments, startups.",
 };
 
 export default function WorkPage() {
   return (
     <>
       <Nav />
-      <main className="max-w-2xl mx-auto px-6 pb-24">
+      <main className="max-w-2xl mx-auto px-6 pb-8">
         <div className="py-10">
           <h1 className="text-2xl font-bold mb-2" style={{ color: "var(--text-1)", letterSpacing: "-0.02em" }}>
-            Work
+            Builds
           </h1>
           <p className="text-sm mb-10" style={{ color: "var(--text-2)" }}>
-            Things I&apos;ve built, explored, or shipped.
+            Everything I&apos;m working on — projects, experiments, startups, and whatever else grabs me.
           </p>
 
           <div>
@@ -50,6 +51,9 @@ export default function WorkPage() {
           </div>
         </div>
       </main>
+      <div className="max-w-2xl mx-auto px-6">
+        <Footer />
+      </div>
     </>
   );
 }

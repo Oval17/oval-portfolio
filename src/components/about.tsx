@@ -1,16 +1,17 @@
 import { experience } from "@/lib/data";
 
+const VIOLET = "#a78bfa";
+
 export default function About() {
   return (
     <section className="py-8">
-      {/* Bio */}
       <div className="space-y-4 text-sm leading-[1.8] mb-10" style={{ color: "var(--text-2)", fontFamily: "var(--font-geist-mono)" }}>
         <p>
           Chronically online. Most hours go into writing code, reviewing code,
           breaking things, and occasionally shipping something that actually works.
         </p>
         <p>
-          I live mostly in TypeScript and JavaScript, but hardware pulls me in too
+          I live mostly in TypeScript and JavaScript, but hardware pulls me in too —
           IoT, Raspberry Pi. Lately deep in AI and agentic systems.
         </p>
         <p>
@@ -18,7 +19,6 @@ export default function About() {
         </p>
       </div>
 
-      {/* Experience — flows directly, no heading */}
       <div className="space-y-7">
         {experience.map((job, i) => (
           <div key={i}>
@@ -26,7 +26,7 @@ export default function About() {
               <p className="text-sm font-semibold" style={{ color: "var(--text-1)" }}>
                 {job.company}
               </p>
-              <p className="text-xs font-mono" style={{ color: "var(--text-3)" }}>
+              <p className="text-xs font-mono font-medium" style={{ color: VIOLET }}>
                 {job.period}
               </p>
             </div>

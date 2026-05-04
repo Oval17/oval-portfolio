@@ -31,7 +31,7 @@ export const experience = [
   {
     company: "Google Summer of Code '24",
     role: "Open Source Contributor · SugarLabs",
-    period: "May 2024 — Jul 2024",
+    period: "May 2024 — Aug 2024",
     description:
       "Worked on Sugar, SugarLabs' flagship education platform — porting and improving the experience on Raspberry Pi.",
   },

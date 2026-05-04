@@ -68,12 +68,6 @@ function MarqueeRow({ items, reverse = false }: { items: typeof row1; reverse?: 
 export default function TechStack() {
   return (
     <section className="py-8 border-t" style={{ borderColor: "var(--border)" }}>
-      <h2
-        className="text-xs font-medium tracking-widest uppercase mb-5"
-        style={{ color: "var(--text-3)" }}
-      >
-        Tools &amp; Stack
-      </h2>
       <div className="flex flex-col gap-3 -mx-6 px-0">
         <MarqueeRow items={row1} />
         <MarqueeRow items={row2} reverse />
