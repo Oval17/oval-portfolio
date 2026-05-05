@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -12,7 +14,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Anurag", url: "https://github.com/Oval17" }],
   twitter: { card: "summary", creator: "@Oval170" },
   icons: {
-    icon: "/favicon.svg",
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👾</text></svg>",
   },
 };
 
@@ -21,6 +23,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
       <body className="min-h-screen">
         <ThemeProvider>{children}</ThemeProvider>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
