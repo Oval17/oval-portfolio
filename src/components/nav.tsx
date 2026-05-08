@@ -19,7 +19,7 @@ export default function Nav() {
           className="text-sm font-bold tracking-tight transition-opacity hover:opacity-70"
           style={{ color: "var(--text-1)", fontFamily: "var(--font-geist-mono)" }}
         >
-          Oval
+          Oval<span style={{ color: VIOLET }}>.</span>
         </Link>
         <div className="flex items-center gap-5">
           <Link
