@@ -1,4 +1,4 @@
-import { experience } from "@/lib/data";
+import { experience, education } from "@/lib/data";
 
 const VIOLET = "#a78bfa";
 
@@ -8,8 +8,7 @@ export default function About() {
       {/* Bio */}
       <div className="space-y-3 text-sm leading-[1.8] mb-10" style={{ color: "var(--text-2)", fontFamily: "var(--font-geist-mono)" }}>
         <p>
-          Chronically online. Most hours go into writing code, reviewing code,
-          breaking things, and occasionally shipping something that actually works.
+          Chronically online. Most hours go into writing code, reviewing code.
         </p>
         <p>
           Lately deep in AI and agentic systems.
@@ -19,8 +18,14 @@ export default function About() {
         </p>
       </div>
 
-      {/* Experience */}
-      <div className="space-y-8">
+      {/* Work Experience */}
+      <p
+        className="text-base font-bold mb-6"
+        style={{ color: "var(--text-1)", fontFamily: "var(--font-geist-mono)" }}
+      >
+        Work Ex.
+      </p>
+      <div className="space-y-8 mb-12">
         {experience.map((job, i) => (
           <div key={i}>
             <div className="flex items-baseline justify-between mb-1">
@@ -48,6 +53,31 @@ export default function About() {
             </div>
             <p className="text-sm leading-relaxed" style={{ color: "var(--text-2)" }}>
               {job.description}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      {/* Education */}
+      <p
+        className="text-base font-bold mb-6"
+        style={{ color: "var(--text-1)", fontFamily: "var(--font-geist-mono)" }}
+      >
+        Education
+      </p>
+      <div className="space-y-8">
+        {education.map((edu, i) => (
+          <div key={i}>
+            <div className="flex items-baseline justify-between mb-1">
+              <p className="text-base font-semibold" style={{ color: "var(--text-1)" }}>
+                {edu.institution}
+              </p>
+              <p className="text-sm font-mono font-medium" style={{ color: VIOLET }}>
+                {edu.period}
+              </p>
+            </div>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--text-2)" }}>
+              {edu.description}
             </p>
           </div>
         ))}

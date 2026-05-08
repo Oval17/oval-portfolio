@@ -1,7 +1,7 @@
 export const personal = {
   name: "Anurag Singh",
   handle: "oval",
-  tagline: "Engineer. I write code (or do I?). 24hrs is never enough.",
+  tagline: "Engineer. Developer. Lazy.",
   email: "oval17.contact@gmail.com",
   location: "India",
   social: {
@@ -18,25 +18,34 @@ export const experience = [
     company: "TELUS Digital AI",
     role: "SDE Intern",
     type: "Hybrid",
-    period: "Jul 2025 — Present",
+    period: "Jul 2025 - Present",
     description:
-      "Building internal tools and AI-powered developer products. Working across the stack with TypeScript and Node.js.",
+      "Part of TELUS International's flagship team GTS, working on the frontend. Shipped 7+ features and resolved 30+ bugs, including P0s, with oncall escalation handling.",
   },
   {
     company: "GSoC '26",
     role: "Open Source Contributor · Learning Unlimited",
     type: "Remote",
-    period: "May 2026 — Aug 2026",
+    period: "May 2026 - Aug 2026",
     description:
-      "Selected to bootstrap and overhaul the frontend theming system — improving UI consistency, upgrading the component architecture, and modernising the overall frontend stack.",
+      "Bootstrapped and overhauled the frontend theming system, improving UI consistency, upgrading the component architecture, and modernising the overall frontend stack.",
   },
   {
     company: "GSoC '24",
     role: "Open Source Contributor · SugarLabs",
     type: "Remote",
-    period: "May 2024 — Aug 2024",
+    period: "May 2024 - Aug 2024",
     description:
-      "Worked on Sugar, SugarLabs' flagship education platform — porting and improving the experience on Raspberry Pi.",
+      "Worked on Sugar, SugarLabs' flagship education platform, porting and improving the experience on Raspberry Pi.",
+  },
+];
+
+export const education = [
+  {
+    institution: "BITS Pilani",
+    period: "Sept 2021 - May 2026",
+    description:
+      "Completed Master's in Physics and Bachelor's in Computer Science (Dual Degree).",
   },
 ];
 
