@@ -1,19 +1,27 @@
 export const personal = {
   name: "Anurag Singh",
   handle: "oval",
-  tagline: "Engineer. Developer. Lazy.",
+  tagline: "Builder • Engineer",
   email: "oval17.contact@gmail.com",
   location: "India",
   social: {
     github: "https://github.com/Oval17",
     twitter: "https://x.com/Oval170",
     youtube: "https://youtube.com/@ovalcodes",
-    instagram: "https://www.instagram.com/oval.codess/",
+    instagram: "https://www.instagram.com/oval.codes/",
     email: "mailto:oval17.contact@gmail.com",
   },
 };
 
 export const experience = [
+  {
+    company: "GSoC '26",
+    role: "Open Source Contributor · Learning Unlimited",
+    type: "Remote",
+    period: "May 2026 - Present",
+    description:
+      "Bootstrapped and overhauled the frontend theming system, improving UI consistency, upgrading the component architecture, and modernising the overall frontend stack.",
+  },
   {
     company: "TELUS Digital AI",
     role: "SDE Intern",
@@ -21,14 +29,6 @@ export const experience = [
     period: "Jul 2025 - Present",
     description:
       "Part of TELUS International's flagship team GTS, working on the frontend. Shipped 7+ features and resolved 30+ bugs, including P0s, with oncall escalation handling.",
-  },
-  {
-    company: "GSoC '26",
-    role: "Open Source Contributor · Learning Unlimited",
-    type: "Remote",
-    period: "May 2026 - Aug 2026",
-    description:
-      "Bootstrapped and overhauled the frontend theming system, improving UI consistency, upgrading the component architecture, and modernising the overall frontend stack.",
   },
   {
     company: "GSoC '24",

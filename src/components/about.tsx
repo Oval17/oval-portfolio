@@ -8,10 +8,16 @@ export default function About() {
       {/* Bio */}
       <div className="space-y-3 text-sm leading-[1.8] mb-10" style={{ color: "var(--text-2)", fontFamily: "var(--font-geist-mono)" }}>
         <p>
+          I like to build things.
+        </p>
+        <p>
           Chronically online.
         </p>
         <p>
           Away from the screen: cricket and long walks.
+        </p>
+        <p>
+          Open to work — drop a mail or message to collaborate.
         </p>
       </div>
 
