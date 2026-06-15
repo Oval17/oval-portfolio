@@ -12,10 +12,10 @@ const row1 = [
   { name: "JavaScript", Icon: SiJavascript, color: "#f7df1e" },
   { name: "Python", Icon: SiPython, color: "#4b8bbe" },
   { name: "React", Icon: SiReact, color: "#61dafb" },
-  { name: "Next.js", Icon: SiNextdotjs, color: "#ffffff" },
+  { name: "Next.js", Icon: SiNextdotjs, color: "var(--text-1)" },
   { name: "Node.js", Icon: SiNodedotjs, color: "#68a063" },
   { name: "TailwindCSS", Icon: SiTailwindcss, color: "#38bdf8" },
-  { name: "Three.js", Icon: SiThreedotjs, color: "#ffffff" },
+  { name: "Three.js", Icon: SiThreedotjs, color: "var(--text-1)" },
   { name: "C / C++", Icon: SiCplusplus, color: "#6295cb" },
 ];
 
@@ -27,7 +27,7 @@ const row2 = [
   { name: "PostgreSQL", Icon: SiPostgresql, color: "#4169e1" },
   { name: "MongoDB", Icon: SiMongodb, color: "#47a248" },
   { name: "Claude AI", Icon: VscCode, color: "#cc785c" },
-  { name: "IoT", Icon: VscCode, color: "#a78bfa" },
+  { name: "IoT", Icon: VscCode, color: "#9461f7" },
 ];
 
 function Pill({ name, Icon, color }: { name: string; Icon: React.ElementType; color: string }) {
@@ -67,7 +67,14 @@ function MarqueeRow({ items, reverse = false }: { items: typeof row1; reverse?: 
 
 export default function TechStack() {
   return (
-    <section className="py-8 border-t" style={{ borderColor: "var(--border)" }}>
+    <section className="py-8 border-t relative" style={{ borderColor: "var(--border)" }}>
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          backgroundImage: "radial-gradient(circle, var(--dot-color, rgba(0,0,0,0.15)) 1px, transparent 1px)",
+          backgroundSize: "24px 24px",
+        }}
+      />
       <p
         className="text-base font-bold mb-6"
         style={{ color: "var(--text-1)", fontFamily: "var(--font-geist-mono)" }}

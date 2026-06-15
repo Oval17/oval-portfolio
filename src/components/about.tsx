@@ -1,6 +1,6 @@
 import { experience, education } from "@/lib/data";
 
-const VIOLET = "#a78bfa";
+const VIOLET = "#9461f7";
 
 export default function About() {
   return (
@@ -44,13 +44,14 @@ export default function About() {
                 {job.role}
               </p>
               <span
-                className="text-xs px-1.5 py-0.5 rounded font-mono"
+                className="inline-flex items-center gap-1.5 text-xs px-1.5 py-0.5 rounded font-mono"
                 style={{
-                  background: "rgba(167,139,250,0.1)",
+                  background: "rgba(148,97,247,0.1)",
                   color: VIOLET,
-                  border: "1px solid rgba(167,139,250,0.2)",
+                  border: "1px solid rgba(148,97,247,0.2)",
                 }}
               >
+                <span className="inline-block w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: VIOLET }} />
                 {job.type}
               </span>
             </div>

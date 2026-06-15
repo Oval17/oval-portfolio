@@ -12,6 +12,7 @@
   --text-1: #111111;
   --text-2: #555555;
   --text-3: #999999;
+  --dot-color: rgba(0, 0, 0, 0.15);
 }
 
 :root[class~="dark"] {
@@ -21,6 +22,7 @@
   --text-1: #ffffff;
   --text-2: #a0aab4;
   --text-3: #4a5260;
+  --dot-color: rgba(255, 255, 255, 0.12);
 }
 
 * {
