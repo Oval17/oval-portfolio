@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { personal } from "@/lib/data";
 
-const VIOLET = "#a78bfa";
+const VIOLET = "#9461f7";
 
 const socials = [
   {
@@ -55,7 +55,15 @@ const socials = [
 export default function Hero() {
   return (
     <>
-      <section className="py-8">
+      <section className="py-8 relative">
+        {/* Dotted grid background */}
+        <div
+          className="absolute inset-0 -z-10"
+          style={{
+            backgroundImage: "radial-gradient(circle, var(--dot-color, rgba(0,0,0,0.12)) 1px, transparent 1px)",
+            backgroundSize: "24px 24px",
+          }}
+        />
         <div className="flex items-center gap-6 sm:gap-8">
           <div
             className="flex-shrink-0 w-[88px] h-[88px] rounded-full overflow-hidden"
@@ -77,7 +85,7 @@ export default function Hero() {
               className="text-xl sm:text-2xl font-bold leading-tight mb-1"
               style={{ color: "var(--text-1)", fontFamily: "var(--font-geist-mono)", letterSpacing: "-0.01em" }}
             >
-              Hi, I am Anurag Singh
+              Hi, I am Anurag <span style={{ color: VIOLET }}>Singh</span>
             </h1>
             <p
               className="text-sm leading-relaxed mb-4"
