@@ -31,29 +31,31 @@ export default function About() {
       <div className="space-y-8 mb-12">
         {experience.map((job, i) => (
           <div key={i}>
-            <div className="flex items-baseline justify-between mb-1">
-              <p className="text-base font-semibold" style={{ color: "var(--text-1)" }}>
-                {job.company}
-              </p>
+            <div className="flex items-center justify-between mb-1">
+              <div className="flex items-center gap-2">
+                <p className="text-base font-semibold" style={{ color: "var(--text-1)" }}>
+                  {job.company}
+                </p>
+                <span
+                  className="inline-flex items-center gap-1.5 text-xs px-1.5 py-0.5 rounded font-mono"
+                  style={{
+                    background: "rgba(148,97,247,0.1)",
+                    color: VIOLET,
+                    border: "1px solid rgba(148,97,247,0.2)",
+                  }}
+                >
+                  <span className="inline-block w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: VIOLET }} />
+                  {job.type}
+                </span>
+              </div>
               <p className="text-sm font-mono font-medium" style={{ color: VIOLET }}>
                 {job.period}
               </p>
             </div>
-            <div className="flex items-center gap-2 mb-2">
+            <div className="mb-2">
               <p className="text-sm font-mono font-semibold" style={{ color: "var(--text-2)" }}>
                 {job.role}
               </p>
-              <span
-                className="inline-flex items-center gap-1.5 text-xs px-1.5 py-0.5 rounded font-mono"
-                style={{
-                  background: "rgba(148,97,247,0.1)",
-                  color: VIOLET,
-                  border: "1px solid rgba(148,97,247,0.2)",
-                }}
-              >
-                <span className="inline-block w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: VIOLET }} />
-                {job.type}
-              </span>
             </div>
             <p className="text-sm leading-relaxed" style={{ color: "var(--text-2)" }}>
               {job.description}
