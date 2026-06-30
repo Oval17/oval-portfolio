@@ -30,12 +30,12 @@ export default function Nav() {
             >
               My Studio
             </Link>
-            {/* Squiggly arrow with loop pointing at My Studio */}
-            <div style={{ position: "absolute", top: "8px", left: "-62px", pointerEvents: "none" }}>
+            {/* Horizontal squiggly arrow to the left of "My Studio" */}
+            <div style={{ position: "absolute", right: "calc(100% + 4px)", top: "0px", pointerEvents: "none" }}>
               <svg
-                width="58"
-                height="52"
-                viewBox="0 0 62 56"
+                width="62"
+                height="22"
+                viewBox="0 0 66 24"
                 fill="none"
                 stroke={VIOLET}
                 strokeWidth="2.2"
@@ -43,17 +43,17 @@ export default function Nav() {
                 strokeLinejoin="round"
                 style={{ overflow: "visible" }}
               >
-                {/* Tail → loop → sweep to arrowhead at upper-right */}
+                {/* Curl at tail (left), sweep right to arrowhead */}
                 <path
-                  d="M 14,52 C 7,48 3,40 7,32 C 11,24 21,24 21,32 C 21,40 13,42 10,36 C 7,30 13,22 22,18 C 31,14 42,10 54,10"
+                  d="M 6,20 C 1,15 0,9 4,5 C 8,1 15,3 13,9 C 11,15 6,14 8,8 C 10,2 20,0 34,6 C 44,10 54,10 58,7"
                   pathLength="1"
                   strokeDasharray="1"
                   strokeDashoffset="1"
                   style={{ animation: "squiggleDraw 1.5s cubic-bezier(0.4,0,0.2,1) 0.3s forwards" }}
                 />
-                {/* Arrowhead */}
+                {/* Arrowhead pointing right */}
                 <path
-                  d="M 54,10 L 49,7 M 54,10 L 51,14"
+                  d="M 58,7 L 54,4 M 58,7 L 54,10"
                   pathLength="1"
                   strokeDasharray="1"
                   strokeDashoffset="1"
@@ -62,9 +62,8 @@ export default function Nav() {
               </svg>
               <span
                 style={{
-                  position: "absolute",
-                  bottom: "-14px",
-                  left: "2px",
+                  display: "block",
+                  marginTop: "1px",
                   fontSize: "9px",
                   color: VIOLET,
                   fontFamily: "var(--font-geist-mono)",
