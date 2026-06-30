@@ -30,48 +30,24 @@ export default function Nav() {
             >
               My Studio
             </Link>
-            {/* Squiggly arrow — label above, arrow below, both inside nav */}
-            <div style={{ position: "absolute", right: "calc(100% + 6px)", top: "-16px", pointerEvents: "none" }}>
-              <span
-                className="squiggle-label"
-                style={{
-                  display: "block",
+            {/* Floating label + simple arrow */}
+            <div style={{ position: "absolute", right: "calc(100% + 10px)", top: "50%", transform: "translateY(-50%)", pointerEvents: "none" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "6px", animation: "floatUpDown 2s ease-in-out infinite" }}>
+                <span style={{
                   fontSize: "10px",
-                  color: VIOLET,
+                  color: "#ffffff",
                   fontFamily: "var(--font-geist-mono)",
                   whiteSpace: "nowrap",
-                  marginBottom: "2px",
-                }}
-              >
-                click here
-              </span>
-              <svg
-                width="66"
-                height="26"
-                viewBox="0 0 70 28"
-                fill="none"
-                stroke={VIOLET}
-                strokeWidth="2.6"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                style={{ overflow: "visible" }}
-              >
-                {/* Tail at bottom-left, loop up and around, exit right to arrowhead */}
-                <path
-                  d="M 12,24 C 4,24 0,16 2,10 C 4,4 10,0 16,4 C 22,8 22,16 16,20 C 10,24 4,22 4,16 C 4,10 10,4 24,6 C 36,8 50,10 62,8"
-                  pathLength="1"
-                  strokeDasharray="1"
-                  strokeDashoffset="1"
-                  style={{ animation: "squiggleDraw 1.4s cubic-bezier(0.4,0,0.2,1) 0.2s forwards" }}
-                />
-                <path
-                  d="M 62,8 L 58,5 M 62,8 L 58,11"
-                  pathLength="1"
-                  strokeDasharray="1"
-                  strokeDashoffset="1"
-                  style={{ animation: "squiggleDraw 0.25s ease 1.55s forwards" }}
-                />
-              </svg>
+                  textShadow: "0 1px 6px rgba(0,0,0,0.55)",
+                  letterSpacing: "0.02em",
+                }}>
+                  click here
+                </span>
+                <svg width="20" height="10" viewBox="0 0 20 10" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="0" y1="5" x2="15" y2="5" stroke="#ffffff" strokeWidth="2" style={{ filter: "drop-shadow(0 1px 4px rgba(0,0,0,0.45))" }} />
+                  <polyline points="11,1 15,5 11,9" stroke="#ffffff" strokeWidth="2" />
+                </svg>
+              </div>
             </div>
           </div>
           {mounted && (
