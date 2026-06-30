@@ -43,9 +43,9 @@ export default function Nav() {
                 }}>
                   click here
                 </span>
-                <svg width="28" height="14" viewBox="0 0 28 14" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M 1,11 C 4,4 14,1 24,7" stroke={VIOLET} strokeWidth="2" fill="none" />
-                  <path d="M 24,7 L 20,4 M 24,7 L 22,11" stroke={VIOLET} strokeWidth="2" />
+                <svg width="30" height="14" viewBox="0 0 30 14" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M 2,9 Q 13,7 24,7" stroke={VIOLET} strokeWidth="1.8" />
+                  <path d="M 20,4 L 24,7 L 20,10" stroke={VIOLET} strokeWidth="1.8" />
                 </svg>
               </div>
             </div>
