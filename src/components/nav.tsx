@@ -30,50 +30,49 @@ export default function Nav() {
             >
               My Studio
             </Link>
-            {/* Horizontal squiggly arrow to the left of "My Studio" */}
-            <div style={{ position: "absolute", right: "calc(100% + 4px)", top: "0px", pointerEvents: "none" }}>
-              <svg
-                width="62"
-                height="22"
-                viewBox="0 0 66 24"
-                fill="none"
-                stroke={VIOLET}
-                strokeWidth="2.2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                style={{ overflow: "visible" }}
-              >
-                {/* Curl at tail (left), sweep right to arrowhead */}
-                <path
-                  d="M 6,20 C 1,15 0,9 4,5 C 8,1 15,3 13,9 C 11,15 6,14 8,8 C 10,2 20,0 34,6 C 44,10 54,10 58,7"
-                  pathLength="1"
-                  strokeDasharray="1"
-                  strokeDashoffset="1"
-                  style={{ animation: "squiggleDraw 1.5s cubic-bezier(0.4,0,0.2,1) 0.3s forwards" }}
-                />
-                {/* Arrowhead pointing right */}
-                <path
-                  d="M 58,7 L 54,4 M 58,7 L 54,10"
-                  pathLength="1"
-                  strokeDasharray="1"
-                  strokeDashoffset="1"
-                  style={{ animation: "squiggleDraw 0.3s ease 1.75s forwards" }}
-                />
-              </svg>
+            {/* Squiggly arrow — label above, arrow below, both inside nav */}
+            <div style={{ position: "absolute", right: "calc(100% + 6px)", top: "-14px", pointerEvents: "none" }}>
               <span
                 style={{
                   display: "block",
-                  marginTop: "1px",
                   fontSize: "9px",
                   color: VIOLET,
                   fontFamily: "var(--font-geist-mono)",
                   whiteSpace: "nowrap",
+                  marginBottom: "1px",
                   opacity: 0,
-                  animation: "fadeIn 0.4s ease 2.1s forwards",
+                  animation: "fadeIn 0.4s ease 1.6s forwards",
                 }}
               >
                 click here
               </span>
+              <svg
+                width="64"
+                height="24"
+                viewBox="0 0 68 26"
+                fill="none"
+                stroke={VIOLET}
+                strokeWidth="2.4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                style={{ overflow: "visible" }}
+              >
+                {/* Loop at tail, sweep right to arrowhead */}
+                <path
+                  d="M 18,20 C 12,22 4,18 2,12 C 0,6 4,0 10,2 C 16,4 18,10 14,14 C 10,18 4,18 6,12 C 8,6 16,2 28,6 C 40,10 52,12 60,10"
+                  pathLength="1"
+                  strokeDasharray="1"
+                  strokeDashoffset="1"
+                  style={{ animation: "squiggleDraw 1.5s cubic-bezier(0.4,0,0.2,1) 0.2s forwards" }}
+                />
+                <path
+                  d="M 60,10 L 56,7 M 60,10 L 56,13"
+                  pathLength="1"
+                  strokeDasharray="1"
+                  strokeDashoffset="1"
+                  style={{ animation: "squiggleDraw 0.25s ease 1.65s forwards" }}
+                />
+              </svg>
             </div>
           </div>
           {mounted && (
