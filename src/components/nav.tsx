@@ -31,46 +31,45 @@ export default function Nav() {
               My Studio
             </Link>
             {/* Squiggly arrow — label above, arrow below, both inside nav */}
-            <div style={{ position: "absolute", right: "calc(100% + 6px)", top: "-14px", pointerEvents: "none" }}>
+            <div style={{ position: "absolute", right: "calc(100% + 6px)", top: "-16px", pointerEvents: "none" }}>
               <span
+                className="squiggle-label"
                 style={{
                   display: "block",
-                  fontSize: "9px",
+                  fontSize: "10px",
                   color: VIOLET,
                   fontFamily: "var(--font-geist-mono)",
                   whiteSpace: "nowrap",
-                  marginBottom: "1px",
-                  opacity: 0,
-                  animation: "fadeIn 0.4s ease 1.6s forwards",
+                  marginBottom: "2px",
                 }}
               >
                 click here
               </span>
               <svg
-                width="64"
-                height="24"
-                viewBox="0 0 68 26"
+                width="66"
+                height="26"
+                viewBox="0 0 70 28"
                 fill="none"
                 stroke={VIOLET}
-                strokeWidth="2.4"
+                strokeWidth="2.6"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 style={{ overflow: "visible" }}
               >
-                {/* Loop at tail, sweep right to arrowhead */}
+                {/* Tail at bottom-left, loop up and around, exit right to arrowhead */}
                 <path
-                  d="M 18,20 C 12,22 4,18 2,12 C 0,6 4,0 10,2 C 16,4 18,10 14,14 C 10,18 4,18 6,12 C 8,6 16,2 28,6 C 40,10 52,12 60,10"
+                  d="M 12,24 C 4,24 0,16 2,10 C 4,4 10,0 16,4 C 22,8 22,16 16,20 C 10,24 4,22 4,16 C 4,10 10,4 24,6 C 36,8 50,10 62,8"
                   pathLength="1"
                   strokeDasharray="1"
                   strokeDashoffset="1"
-                  style={{ animation: "squiggleDraw 1.5s cubic-bezier(0.4,0,0.2,1) 0.2s forwards" }}
+                  style={{ animation: "squiggleDraw 1.4s cubic-bezier(0.4,0,0.2,1) 0.2s forwards" }}
                 />
                 <path
-                  d="M 60,10 L 56,7 M 60,10 L 56,13"
+                  d="M 62,8 L 58,5 M 62,8 L 58,11"
                   pathLength="1"
                   strokeDasharray="1"
                   strokeDashoffset="1"
-                  style={{ animation: "squiggleDraw 0.25s ease 1.65s forwards" }}
+                  style={{ animation: "squiggleDraw 0.25s ease 1.55s forwards" }}
                 />
               </svg>
             </div>
