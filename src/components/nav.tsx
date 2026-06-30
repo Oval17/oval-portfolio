@@ -34,7 +34,7 @@ export default function Nav() {
             <div style={{ position: "absolute", right: "calc(100% + 10px)", top: "50%", transform: "translateY(-50%)", pointerEvents: "none" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "6px", animation: "floatUpDown 2s ease-in-out infinite" }}>
                 <span style={{
-                  fontSize: "13px",
+                  fontSize: "16px",
                   color: VIOLET,
                   fontFamily: "'Caveat', cursive",
                   whiteSpace: "nowrap",
@@ -43,9 +43,9 @@ export default function Nav() {
                 }}>
                   click here
                 </span>
-                <svg width="22" height="10" viewBox="0 0 22 10" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="0" y1="5" x2="16" y2="5" stroke={VIOLET} strokeWidth="2" />
-                  <polyline points="12,1 16,5 12,9" stroke={VIOLET} strokeWidth="2" />
+                <svg width="28" height="14" viewBox="0 0 28 14" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M 1,11 C 4,4 14,1 24,7" stroke={VIOLET} strokeWidth="2" fill="none" />
+                  <path d="M 24,7 L 20,4 M 24,7 L 22,11" stroke={VIOLET} strokeWidth="2" />
                 </svg>
               </div>
             </div>
