@@ -16,7 +16,7 @@ export const personal = {
 export const experience = [
   {
     company: "Oval Studio",
-    role: "One Man Army",
+    role: "Chief Vibes Officer",
     type: "Vibing",
     period: "Jul 2026 - Present",
     description: "making new things everyday",
