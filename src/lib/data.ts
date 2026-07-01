@@ -18,7 +18,7 @@ export const experience = [
     company: "Oval Studio",
     role: "Building",
     type: "Vibing",
-    period: "2026 - Present",
+    period: "Jul 2026 - Present",
     description: "making new things everyday",
   },
   {
