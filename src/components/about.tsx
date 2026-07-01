@@ -1,6 +1,5 @@
 import { experience, education } from "@/lib/data";
-
-const VIOLET = "#9461f7";
+import { VIOLET } from "@/lib/constants";
 
 export default function About() {
   return (
@@ -22,12 +21,12 @@ export default function About() {
       </div>
 
       {/* Work Experience */}
-      <p
+      <h2
         className="text-base font-bold mb-6"
         style={{ color: "var(--text-1)", fontFamily: "var(--font-geist-mono)" }}
       >
         Work Ex.
-      </p>
+      </h2>
       <div className="space-y-8 mb-12">
         {experience.map((job, i) => (
           <div key={i}>
@@ -57,7 +56,7 @@ export default function About() {
                 {job.role}
               </p>
             </div>
-            <p className="text-sm leading-relaxed" style={{ color: "var(--text-2)" }}>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--text-2)", fontFamily: "var(--font-geist-mono)" }}>
               {job.description}
             </p>
           </div>
@@ -65,12 +64,12 @@ export default function About() {
       </div>
 
       {/* Education */}
-      <p
+      <h2
         className="text-base font-bold mb-6"
         style={{ color: "var(--text-1)", fontFamily: "var(--font-geist-mono)" }}
       >
         Education
-      </p>
+      </h2>
       <div className="space-y-8">
         {education.map((edu, i) => (
           <div key={i}>
@@ -82,7 +81,7 @@ export default function About() {
                 {edu.period}
               </p>
             </div>
-            <p className="text-sm leading-relaxed" style={{ color: "var(--text-2)" }}>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--text-2)", fontFamily: "var(--font-geist-mono)" }}>
               {edu.description}
             </p>
           </div>

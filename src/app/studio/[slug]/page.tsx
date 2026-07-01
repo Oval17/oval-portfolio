@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Nav from "@/components/nav";
+import Footer from "@/components/footer";
 import { projects } from "@/lib/data";
 import type { Metadata } from "next";
 
@@ -66,6 +67,9 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </div>
         </div>
       </main>
+      <div className="max-w-2xl mx-auto px-6">
+        <Footer />
+      </div>
     </>
   );
 }

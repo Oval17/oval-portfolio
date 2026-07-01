@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
 import { personal } from "@/lib/data";
-
-const VIOLET = "#9461f7";
+import { VIOLET } from "@/lib/constants";
 
 const socials = [
   {

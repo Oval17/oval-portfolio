@@ -118,22 +118,3 @@ Small footprint, no framework dependencies, drop-in script tag usage.`,
     year: "2023",
   },
 ];
-
-export const techStack = [
-  { name: "TypeScript", icon: "SiTypescript", color: "#3178c6" },
-  { name: "JavaScript", icon: "SiJavascript", color: "#f7df1e" },
-  { name: "Python", icon: "SiPython", color: "#3776ab" },
-  { name: "React", icon: "SiReact", color: "#61dafb" },
-  { name: "Next.js", icon: "SiNextdotjs", color: "#ffffff" },
-  { name: "Node.js", icon: "SiNodedotjs", color: "#339933" },
-  { name: "TailwindCSS", icon: "SiTailwindcss", color: "#06b6d4" },
-  { name: "Three.js", icon: "SiThreedotjs", color: "#ffffff" },
-  { name: "C", icon: "SiC", color: "#a8b9cc" },
-  { name: "C++", icon: "SiCplusplus", color: "#00599c" },
-  { name: "Raspberry Pi", icon: "SiRaspberrypi", color: "#a22846" },
-  { name: "Arduino", icon: "SiArduino", color: "#00979d" },
-  { name: "Git", icon: "SiGit", color: "#f05032" },
-  { name: "Linux", icon: "SiLinux", color: "#fcc624" },
-  { name: "PostgreSQL", icon: "SiPostgresql", color: "#4169e1" },
-  { name: "MongoDB", icon: "SiMongodb", color: "#47a248" },
-];
