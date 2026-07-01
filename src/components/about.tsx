@@ -53,7 +53,7 @@ export default function About() {
               </p>
             </div>
             <div className="mb-2">
-              <p className="text-sm font-mono font-semibold" style={{ color: "var(--text-2)" }}>
+              <p className="text-sm font-mono font-semibold" style={{ color: VIOLET }}>
                 {job.role}
               </p>
             </div>
