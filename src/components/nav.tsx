@@ -41,7 +41,7 @@ export default function Nav() {
                   fontWeight: 500,
                   lineHeight: 1,
                 }}>
-                  click here
+                  check this
                 </span>
                 <svg width="30" height="14" viewBox="0 0 30 14" fill="none" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M 2,9 Q 13,7 24,7" stroke={VIOLET} strokeWidth="1.8" />
