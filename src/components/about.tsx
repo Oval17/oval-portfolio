@@ -48,7 +48,7 @@ export default function About() {
                   {job.type}
                 </span>
               </div>
-              <p className="text-sm font-mono font-medium" style={{ color: "var(--text-3)" }}>
+              <p className="text-sm font-mono font-medium" style={{ color: VIOLET }}>
                 {job.period}
               </p>
             </div>
