@@ -2,8 +2,7 @@
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-
-const VIOLET = "#9461f7";
+import { VIOLET } from "@/lib/constants";
 
 export default function Nav() {
   const { theme, setTheme } = useTheme();

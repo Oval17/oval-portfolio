@@ -75,12 +75,12 @@ export default function TechStack() {
           backgroundSize: "24px 24px",
         }}
       />
-      <p
+      <h2
         className="text-base font-bold mb-6"
         style={{ color: "var(--text-1)", fontFamily: "var(--font-geist-mono)" }}
       >
         Tools & Tech
-      </p>
+      </h2>
       <div className="flex flex-col gap-3 -mx-6 px-0">
         <MarqueeRow items={row1} />
         <MarqueeRow items={row2} reverse />

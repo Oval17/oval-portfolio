@@ -13,7 +13,7 @@ export default function WorkPage() {
       <Nav />
       <main className="max-w-2xl mx-auto px-6 pb-8">
         <div className="py-10">
-          <h1 className="text-2xl font-bold mb-2" style={{ color: "var(--text-1)", letterSpacing: "-0.02em" }}>
+          <h1 className="text-2xl font-bold mb-2" style={{ color: "var(--text-1)", letterSpacing: "-0.02em", fontFamily: "var(--font-geist-mono)" }}>
             My Studio
           </h1>
           <p className="text-sm" style={{ color: "var(--text-2)" }}>

@@ -11,15 +11,18 @@ const caveat = Caveat({ variable: "--font-caveat", subsets: ["latin"], weight: "
 
 export const metadata: Metadata = {
   title: "Anurag (Oval)",
-  description: "Software engineer and builder. GSoC 2024 contributor. SDE Intern at TELUS Digital AI. Physics grad who writes code.",
+  description: "Software engineer and builder. GSoC '24 & '26 contributor. SDE-1 at TELUS Digital AI. Physics grad who writes code.",
   authors: [{ name: "Anurag", url: "https://github.com/Oval17" }],
-  twitter: { card: "summary_large_image", creator: "@Oval170", title: "Anurag (Oval)", description: "Software engineer and builder. GSoC 2024 contributor. SDE Intern at TELUS Digital AI." },
+  twitter: { card: "summary_large_image", creator: "@Oval170", title: "Anurag (Oval)", description: "Software engineer and builder. GSoC '24 & '26 contributor. SDE-1 at TELUS Digital AI." },
   openGraph: {
     title: "Anurag (Oval)",
-    description: "Software engineer and builder. GSoC 2024 contributor. SDE Intern at TELUS Digital AI. Physics grad who writes code.",
+    description: "Software engineer and builder. GSoC '24 & '26 contributor. SDE-1 at TELUS Digital AI. Physics grad who writes code.",
     url: "https://ovalele.in",
     siteName: "Anurag (Oval)",
     type: "website",
+  },
+  verification: {
+    google: "lAl-AdlNPtBGdG7f2eohYocxUdf99fOH_KK3qJnA170",
   },
 };
 
@@ -31,10 +34,10 @@ const jsonLd = {
   url: "https://ovalele.in",
   sameAs: [
     "https://github.com/Oval17",
-    "https://twitter.com/Oval170",
+    "https://x.com/Oval170",
   ],
   jobTitle: "Software Engineer",
-  description: "Software engineer and builder. GSoC 2024 contributor. SDE Intern at TELUS Digital AI.",
+  description: "Software engineer and builder. GSoC '24 & '26 contributor. SDE-1 at TELUS Digital AI.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
