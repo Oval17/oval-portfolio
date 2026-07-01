@@ -16,10 +16,10 @@ export const personal = {
 export const experience = [
   {
     company: "Oval Studio",
-    role: "Chief Vibes Officer",
-    type: "Vibing",
+    role: "Founder",
+    type: "Building",
     period: "Jul 2026 - Present",
-    description: "Making new things everyday",
+    description: "Building new things everyday.",
   },
   {
     company: "TELUS Digital AI",
