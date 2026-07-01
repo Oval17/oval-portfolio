@@ -15,10 +15,25 @@ export const personal = {
 
 export const experience = [
   {
+    company: "TELUS Digital AI",
+    role: "SDE - 1",
+    type: "Hybrid",
+    period: "Jul 2026 - Present",
+    description:
+      "Core member of GTS Frontend Team, working on integrating AI tools and Frontend.",
+  },
+  {
+    company: "Oval Studio",
+    role: "Building",
+    type: "Vibing",
+    period: "2026 - Present",
+    description: "making new things everyday",
+  },
+  {
     company: "GSoC '26",
     role: "Open Source Contributor · Learning Unlimited",
     type: "Remote",
-    period: "May 2026 - Present",
+    period: "May 2026 - Aug 2026",
     description:
       "Bootstrapped and overhauled the frontend theming system, improving UI consistency, upgrading the component architecture, and modernising the overall frontend stack.",
   },
@@ -26,9 +41,9 @@ export const experience = [
     company: "TELUS Digital AI",
     role: "SDE Intern",
     type: "Hybrid",
-    period: "Jul 2025 - Present",
+    period: "Jul 2025 - Jun 2026",
     description:
-      "Part of TELUS International's flagship team GTS, working on the frontend. Shipped 7+ features and resolved 30+ bugs, including P0s, with oncall escalation handling.",
+      "Part of TELUS International's flagship team GTS, worked on the frontend. Shipped 9+ features and resolved 40+ bugs, including P0s, with oncall escalation handling.",
   },
   {
     company: "GSoC '24",
