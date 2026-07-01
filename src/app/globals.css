@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
 @import "tailwindcss";
 
 @theme inline {
@@ -23,6 +24,15 @@
   --text-2: #a0aab4;
   --text-3: #4a5260;
   --dot-color: rgba(255, 255, 255, 0.12);
+}
+
+@keyframes squiggleDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
 }
 
 * {

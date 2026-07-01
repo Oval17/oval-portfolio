@@ -22,13 +22,34 @@ export default function Nav() {
           Oval<span style={{ color: VIOLET }}>.</span>
         </Link>
         <div className="flex items-center gap-5">
-          <Link
-            href="/work"
-            className="text-sm font-semibold transition-opacity hover:opacity-70"
-            style={{ color: "var(--text-1)" }}
-          >
-            My Lab
-          </Link>
+          <div style={{ position: "relative" }}>
+            <Link
+              href="/studio"
+              className="text-sm font-semibold transition-opacity hover:opacity-70"
+              style={{ color: "var(--text-1)" }}
+            >
+              My Studio
+            </Link>
+            {/* Floating label + simple arrow */}
+            <div style={{ position: "absolute", right: "calc(100% + 10px)", top: "50%", transform: "translateY(-50%)", pointerEvents: "none" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "6px", animation: "floatUpDown 2s ease-in-out infinite" }}>
+                <span style={{
+                  fontSize: "16px",
+                  color: VIOLET,
+                  fontFamily: "'Caveat', cursive",
+                  whiteSpace: "nowrap",
+                  fontWeight: 500,
+                  lineHeight: 1,
+                }}>
+                  check this
+                </span>
+                <svg width="30" height="14" viewBox="0 0 30 14" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M 2,9 Q 13,7 24,7" stroke={VIOLET} strokeWidth="1.8" />
+                  <path d="M 20,4 L 24,7 L 20,10" stroke={VIOLET} strokeWidth="1.8" />
+                </svg>
+              </div>
+            </div>
+          </div>
           {mounted && (
             <button
               onClick={() => setTheme(isDark ? "light" : "dark")}
