@@ -19,7 +19,7 @@ export const experience = [
     role: "Chief Vibes Officer",
     type: "Vibing",
     period: "Jul 2026 - Present",
-    description: "making new things everyday",
+    description: "Making new things everyday",
   },
   {
     company: "TELUS Digital AI",
