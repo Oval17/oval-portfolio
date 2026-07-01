@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Caveat } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
@@ -7,20 +7,45 @@ import "./globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+const caveat = Caveat({ variable: "--font-caveat", subsets: ["latin"], weight: "500" });
 
 export const metadata: Metadata = {
   title: "Anurag (Oval)",
-  description: "Engineer. I write code (or do I?). SDE Intern at TELUS Digital AI. GSoC 2024.",
+  description: "Software engineer and builder. GSoC 2024 contributor. SDE Intern at TELUS Digital AI. Physics grad who writes code.",
   authors: [{ name: "Anurag", url: "https://github.com/Oval17" }],
-  twitter: { card: "summary", creator: "@Oval170" },
-  icons: {
-    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👾</text></svg>",
+  twitter: { card: "summary_large_image", creator: "@Oval170", title: "Anurag (Oval)", description: "Software engineer and builder. GSoC 2024 contributor. SDE Intern at TELUS Digital AI." },
+  openGraph: {
+    title: "Anurag (Oval)",
+    description: "Software engineer and builder. GSoC 2024 contributor. SDE Intern at TELUS Digital AI. Physics grad who writes code.",
+    url: "https://ovalele.in",
+    siteName: "Anurag (Oval)",
+    type: "website",
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Anurag Singh",
+  alternateName: "Oval",
+  url: "https://ovalele.in",
+  sameAs: [
+    "https://github.com/Oval17",
+    "https://twitter.com/Oval170",
+  ],
+  jobTitle: "Software Engineer",
+  description: "Software engineer and builder. GSoC 2024 contributor. SDE Intern at TELUS Digital AI.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${caveat.variable}`} suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-screen">
         <ThemeProvider>{children}</ThemeProvider>
         <SpeedInsights />

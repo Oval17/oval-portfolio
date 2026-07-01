@@ -36,7 +36,7 @@ export default function Nav() {
                 <span style={{
                   fontSize: "16px",
                   color: VIOLET,
-                  fontFamily: "'Caveat', cursive",
+                  fontFamily: "var(--font-caveat), cursive",
                   whiteSpace: "nowrap",
                   fontWeight: 500,
                   lineHeight: 1,
