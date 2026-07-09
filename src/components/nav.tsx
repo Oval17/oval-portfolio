@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { VIOLET } from "@/lib/constants";
 
 export default function Nav() {
@@ -9,6 +10,8 @@ export default function Nav() {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
   const isDark = theme === "dark";
+  const pathname = usePathname();
+  const isStudio = pathname === "/studio";
 
   return (
     <header>
@@ -29,25 +32,26 @@ export default function Nav() {
             >
               My Studio
             </Link>
-            {/* Floating label + simple arrow */}
-            <div style={{ position: "absolute", right: "calc(100% + 10px)", top: "50%", transform: "translateY(-50%)", pointerEvents: "none" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: "6px", animation: "floatUpDown 2s ease-in-out infinite" }}>
-                <span style={{
-                  fontSize: "16px",
-                  color: VIOLET,
-                  fontFamily: "var(--font-caveat), cursive",
-                  whiteSpace: "nowrap",
-                  fontWeight: 500,
-                  lineHeight: 1,
-                }}>
-                  check this
-                </span>
-                <svg width="30" height="14" viewBox="0 0 30 14" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M 2,9 Q 13,7 24,7" stroke={VIOLET} strokeWidth="1.8" />
-                  <path d="M 20,4 L 24,7 L 20,10" stroke={VIOLET} strokeWidth="1.8" />
-                </svg>
+            {!isStudio && (
+              <div style={{ position: "absolute", right: "calc(100% + 10px)", top: "50%", transform: "translateY(-50%)", pointerEvents: "none" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "6px", animation: "floatUpDown 2s ease-in-out infinite" }}>
+                  <span style={{
+                    fontSize: "16px",
+                    color: VIOLET,
+                    fontFamily: "var(--font-caveat), cursive",
+                    whiteSpace: "nowrap",
+                    fontWeight: 500,
+                    lineHeight: 1,
+                  }}>
+                    check this
+                  </span>
+                  <svg width="30" height="14" viewBox="0 0 30 14" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M 2,9 Q 13,7 24,7" stroke={VIOLET} strokeWidth="1.8" />
+                    <path d="M 20,4 L 24,7 L 20,10" stroke={VIOLET} strokeWidth="1.8" />
+                  </svg>
+                </div>
               </div>
-            </div>
+            )}
           </div>
           {mounted && (
             <button
