@@ -15,19 +15,19 @@ export const personal = {
 
 export const experience = [
   {
-    company: "Oval Studio",
-    role: "Builder in Chief",
-    type: "Vibing",
-    period: "Jul 2026 - Present",
-    description: "Building new things everyday.",
-  },
-  {
     company: "TELUS Digital AI",
     role: "SDE - 1",
     type: "Hybrid",
     period: "Jul 2026 - Present",
     description:
       "Core member of GTS Frontend Team, working on integrating AI tools and Frontend.",
+  },
+  {
+    company: "Oval Studio",
+    role: "Builder in Chief",
+    type: "Vibing",
+    period: "Jul 2026 - Present",
+    description: "Building new things everyday.",
   },
   {
     company: "GSoC '26",

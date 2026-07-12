@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 import { experience, education } from "@/lib/data";
 import { VIOLET } from "@/lib/constants";
@@ -22,7 +23,7 @@ export default function About() {
         <p>I like to build things.</p>
         <p>Chronically online.</p>
         <p>Away from the screen: cricket and long walks.</p>
-        <p>Open to work — drop a mail or message to collaborate.</p>
+        <p>Check out <Link href="/studio" style={{ color: VIOLET }} className="hover:opacity-70 transition-opacity">Oval Studio</Link>.</p>
       </div>
 
       {/* Work Experience */}
