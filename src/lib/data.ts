@@ -69,12 +69,16 @@ export const books = [
     title: "Ikigai",
     author: "Héctor García & Francesc Miralles",
     tagline: "The Japanese Secret to a Long and Happy Life",
+    description:
+      "A gentle framework for finding purpose, drawn from the daily habits of Okinawa's longest-living people.",
     cover: "/books/ikigai.jpg",
   },
   {
     title: "The Psychology of Money",
     author: "Morgan Housel",
     tagline: "Timeless Lessons on Wealth, Greed, and Happiness",
+    description:
+      "Short, sharp lessons on how behavior, not knowledge, drives most financial outcomes.",
     cover: "/books/psychology-of-money.jpg",
   },
 ];
@@ -91,7 +95,7 @@ export const extras = [
 
 export const projects = [
   {
-    name: "point-cloud-data-viewer",
+    name: "PCD-viewer",
     icon: "point-cloud" as const,
     tagline: "3D point cloud visualization in the browser.",
     liveHref: "https://pcd-viewer.netlify.app/",
@@ -107,7 +111,7 @@ export const projects = [
   {
     name: "Corg-Labs",
     icon: "chip" as const,
-    tagline: "30+ projects of real, close-to-the-metal C — an org exclusively for systems programming from the ground up.",
+    tagline: "30+ systems-programming projects in raw C.",
     liveHref: "https://github.com/Corg-Labs",
     codeHref: "https://github.com/Corg-Labs",
   },

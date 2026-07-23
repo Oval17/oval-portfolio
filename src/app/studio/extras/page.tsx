@@ -16,7 +16,14 @@ export default function ExtrasPage() {
     <>
       <Nav />
       <StudioNav />
-      <main className="max-w-2xl mx-auto px-6 pb-8">
+      <main className="relative max-w-2xl mx-auto px-6 pb-8">
+        <div
+          className="absolute inset-0 -z-10"
+          style={{
+            backgroundImage: "radial-gradient(circle, var(--dot-color, rgba(0,0,0,0.12)) 1px, transparent 1px)",
+            backgroundSize: "24px 24px",
+          }}
+        />
         <div className="py-10">
           <h1
             className="text-lg font-bold font-mono mb-8"
@@ -32,21 +39,21 @@ export default function ExtrasPage() {
                 href={extra.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="studio-card flex items-center justify-between gap-4 p-4 rounded-lg"
-                style={{ border: "1px solid var(--border)" }}
+                className="studio-card flex items-start justify-between gap-4 p-4 rounded-lg"
+                style={{ border: "1px solid var(--border)", background: "var(--bg)" }}
               >
-                <div className="flex items-center gap-3 min-w-0">
+                <div className="flex items-start gap-3 min-w-0">
                   <StudioIcon name={extra.icon} />
                   <div className="min-w-0">
                     <p className="text-sm font-bold font-mono mb-0.5" style={{ color: VIOLET }}>
                       {extra.name}
                     </p>
-                    <p className="text-sm truncate" style={{ color: "var(--text-2)" }}>
+                    <p className="text-sm" style={{ color: "var(--text-2)" }}>
                       {extra.tagline}
                     </p>
                   </div>
                 </div>
-                <div className="shrink-0 flex flex-wrap justify-end gap-1.5">
+                <div className="shrink-0 self-center flex flex-wrap justify-end gap-1.5">
                   {extra.tags.map((tag) => (
                     <span
                       key={tag}

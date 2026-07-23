@@ -27,16 +27,16 @@ export default function ProjectCard({ project }: { project: Project }) {
       onKeyDown={(e) => {
         if (e.key === "Enter") window.open(project.liveHref, "_blank", "noopener,noreferrer");
       }}
-      className="studio-card flex items-center justify-between gap-4 p-4 rounded-lg cursor-pointer"
-      style={{ border: "1px solid var(--border)" }}
+      className="studio-card flex items-start justify-between gap-4 p-4 rounded-lg cursor-pointer"
+      style={{ border: "1px solid var(--border)", background: "var(--bg)" }}
     >
-      <div className="flex items-center gap-3 min-w-0">
+      <div className="flex items-start gap-3 min-w-0">
         <StudioIcon name={project.icon} />
         <div className="min-w-0">
           <p className="text-sm font-bold font-mono mb-0.5" style={{ color: VIOLET }}>
             {project.name}
           </p>
-          <p className="text-sm truncate" style={{ color: "var(--text-2)" }}>
+          <p className="text-sm" style={{ color: "var(--text-2)" }}>
             {project.tagline}
           </p>
         </div>
@@ -47,8 +47,8 @@ export default function ProjectCard({ project }: { project: Project }) {
         rel="noopener noreferrer"
         aria-label={`View ${project.name} source on GitHub`}
         onClick={(e) => e.stopPropagation()}
-        className="shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-md transition-opacity hover:opacity-70"
-        style={{ color: "var(--text-2)", border: "1px solid var(--border)" }}
+        className="shrink-0 self-center inline-flex items-center justify-center w-8 h-8 rounded-md transition-opacity hover:opacity-70"
+        style={{ color: "var(--text-2)", border: "1px solid var(--border)", background: "var(--bg)" }}
       >
         <GithubIcon />
       </a>

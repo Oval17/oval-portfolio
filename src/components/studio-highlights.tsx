@@ -68,7 +68,7 @@ export default function StudioHighlights({ revealed }: { revealed: boolean }) {
           <p style={{ color: "var(--text-1)", marginBottom: "22px" }}>
             Deep in{" "}
             <span style={{ color: VIOLET, fontWeight: 600 }}>math, ML, and deep learning</span>{" "}
-            right now — first principles over tutorials.
+            right now.
           </p>
 
           <p style={{ marginBottom: "22px" }}>

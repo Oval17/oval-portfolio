@@ -66,7 +66,7 @@ function BurstIcon() {
 const SECTIONS = [
   { href: "/studio/projects", label: "Projects", Icon: CodeIcon },
   { href: "/studio/blog", label: "Blogs", Icon: BulbIcon },
-  { href: "/studio/books", label: "Books I'm Reading", Icon: StackedBooksIcon },
+  { href: "/studio/books", label: "Library", Icon: StackedBooksIcon },
   { href: "/studio/extras", label: "Extras", Icon: BurstIcon },
 ];
 

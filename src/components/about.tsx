@@ -38,8 +38,8 @@ export default function About() {
           const isOpen = openJobs.has(i);
           return (
             <div key={i}>
-              <div className="flex items-center justify-between mb-1">
-                <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1 mb-1">
+                <div className="flex items-center gap-2 flex-wrap">
                   <p className="text-base font-semibold" style={{ color: "var(--text-1)" }}>
                     {job.company}
                   </p>
@@ -55,7 +55,7 @@ export default function About() {
                     {job.type}
                   </span>
                 </div>
-                <p className="text-sm font-mono font-medium" style={{ color: "var(--text-1)" }}>
+                <p className="text-sm font-mono font-medium ml-auto whitespace-nowrap" style={{ color: "var(--text-1)" }}>
                   {job.period}
                 </p>
               </div>
