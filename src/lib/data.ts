@@ -107,7 +107,7 @@ export const projects = [
   {
     name: "Corg-Labs",
     icon: "chip" as const,
-    tagline: "C-based tools for image viewing and file compression.",
+    tagline: "30+ projects of real, close-to-the-metal C — an org exclusively for systems programming from the ground up.",
     liveHref: "https://github.com/Corg-Labs",
     codeHref: "https://github.com/Corg-Labs",
   },

@@ -25,33 +25,32 @@ export default function ExtrasPage() {
             Extras
           </h1>
 
-          <div className="space-y-6">
+          <div className="space-y-4">
             {extras.map((extra) => (
               <a
                 key={extra.name}
                 href={extra.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="studio-card block p-4 rounded-lg"
+                className="studio-card flex items-center justify-between gap-4 p-4 rounded-lg"
                 style={{ border: "1px solid var(--border)" }}
               >
-                <div className="flex items-center gap-3 mb-3">
+                <div className="flex items-center gap-3 min-w-0">
                   <StudioIcon name={extra.icon} />
-                  <p
-                    className="text-sm font-bold font-mono"
-                    style={{ color: VIOLET }}
-                  >
-                    {extra.name}
-                  </p>
+                  <div className="min-w-0">
+                    <p className="text-sm font-bold font-mono mb-0.5" style={{ color: VIOLET }}>
+                      {extra.name}
+                    </p>
+                    <p className="text-sm truncate" style={{ color: "var(--text-2)" }}>
+                      {extra.tagline}
+                    </p>
+                  </div>
                 </div>
-                <p className="text-sm mb-3" style={{ color: "var(--text-2)" }}>
-                  {extra.tagline}
-                </p>
-                <div className="flex flex-wrap gap-1.5">
+                <div className="shrink-0 flex flex-wrap justify-end gap-1.5">
                   {extra.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs px-2 py-0.5 rounded-md font-mono"
+                      className="text-xs px-2 py-1 rounded-md font-mono whitespace-nowrap"
                       style={{
                         background: "var(--surface)",
                         color: "var(--text-2)",

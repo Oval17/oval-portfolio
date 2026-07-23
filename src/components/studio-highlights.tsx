@@ -1,5 +1,18 @@
 "use client";
+import Link from "next/link";
 import { VIOLET } from "@/lib/constants";
+
+function HighlightLink({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <Link
+      href={href}
+      className="transition-opacity hover:opacity-70"
+      style={{ color: VIOLET, fontWeight: 600, textDecoration: "underline", textUnderlineOffset: "3px" }}
+    >
+      {children}
+    </Link>
+  );
+}
 
 export default function StudioHighlights({ revealed }: { revealed: boolean }) {
   return (
@@ -48,9 +61,26 @@ export default function StudioHighlights({ revealed }: { revealed: boolean }) {
         </div>
 
         {/* body */}
-        <div style={{ padding: "16px 20px", fontSize: "12px", lineHeight: "1.7" }}>
-          <div style={{ color: "var(--text-2)" }}>$ cat highlights.txt</div>
-          <div style={{ color: VIOLET }}>coming soon...</div>
+        <div style={{ padding: "22px 24px", fontSize: "15px", lineHeight: "1.85" }}>
+          <div style={{ color: "var(--text-2)", fontSize: "12px", marginBottom: "10px" }}>
+            $ cat focus.md
+          </div>
+          <p style={{ color: "var(--text-1)", marginBottom: "22px" }}>
+            Deep in{" "}
+            <span style={{ color: VIOLET, fontWeight: 600 }}>math, ML, and deep learning</span>{" "}
+            right now — first principles over tutorials.
+          </p>
+
+          <p style={{ marginBottom: "22px" }}>
+            <HighlightLink href="/studio/projects">→ see the projects I&apos;m building</HighlightLink>
+          </p>
+
+          <div style={{ color: "var(--text-2)", fontSize: "12px", marginBottom: "8px" }}>
+            $ cat currently-reading.md
+          </div>
+          <p style={{ margin: 0 }}>
+            Currently reading <HighlightLink href="/studio/books">Ikigai</HighlightLink>.
+          </p>
         </div>
       </div>
     </div>

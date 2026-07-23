@@ -20,7 +20,7 @@ export default function BlogPage() {
             className="text-lg font-bold font-mono mb-3"
             style={{ color: VIOLET }}
           >
-            Blog & What I&apos;m Learning
+            Blogs
           </h1>
           <p className="text-sm" style={{ color: "var(--text-3)" }}>
             Nothing here yet — check back soon.
