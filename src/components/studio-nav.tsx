@@ -93,16 +93,27 @@ function NavIcon({
     <Link
       href={href}
       aria-label={label}
-      className="group relative flex items-center justify-center w-11 h-11 rounded-full transition-all duration-150 hover:scale-110"
-      style={{
-        color: active ? VIOLET : "var(--text-2)",
-        background: active ? "rgba(148,97,247,0.16)" : "transparent",
-        boxShadow: active ? `0 0 14px ${VIOLET}40` : "none",
-      }}
+      className={[
+        "group relative flex items-center justify-center w-9 h-9 rounded-full",
+        "transition-all duration-300 ease-out",
+        "hover:scale-125 hover:-translate-y-1",
+        active
+          ? ""
+          : "text-[color:var(--text-2)] hover:text-[#9461f7] hover:bg-[rgba(148,97,247,0.16)]",
+      ].join(" ")}
+      style={
+        active
+          ? {
+              color: VIOLET,
+              background: "rgba(148,97,247,0.16)",
+              boxShadow: `0 0 14px ${VIOLET}40`,
+            }
+          : undefined
+      }
     >
       {children}
       <span
-        className="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md px-2 py-1 text-[10px] font-mono opacity-0 transition-opacity duration-150 group-hover:opacity-100"
+        className="pointer-events-none absolute -top-9 left-1/2 -translate-x-1/2 translate-y-1 scale-90 whitespace-nowrap rounded-md px-2 py-1 text-[10px] font-mono opacity-0 transition-all duration-200 ease-out group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100"
         style={{
           background: "var(--bg)",
           color: VIOLET,
@@ -121,14 +132,19 @@ export default function StudioNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex justify-center pt-2 pb-2">
+    <nav className="group/nav flex justify-center pt-2 pb-2">
       <div
-        className="inline-flex items-center gap-1 rounded-full px-2 py-1.5"
+        className={[
+          "inline-flex items-center gap-0.5 rounded-full px-1.5 py-1",
+          "border-[rgba(148,97,247,0.3)] group-hover/nav:border-[rgba(148,97,247,0.55)]",
+          "group-hover/nav:px-2 group-hover/nav:gap-1",
+          "transition-all duration-300 ease-out",
+        ].join(" ")}
         style={{
           backgroundColor: "var(--bg)",
           backgroundImage: `linear-gradient(${VIOLET}0a, ${VIOLET}0a)`,
-          border: `1px solid ${VIOLET}30`,
-          boxShadow: `0 0 20px ${VIOLET}14, inset 0 0 10px ${VIOLET}08`,
+          borderWidth: "1px",
+          borderStyle: "solid",
         }}
       >
         <NavIcon href="/" label="Back home" active={false}>
