@@ -3,6 +3,7 @@ import Nav from "@/components/nav";
 import StudioNav from "@/components/studio-nav";
 import Footer from "@/components/footer";
 import { books } from "@/lib/data";
+import { VIOLET } from "@/lib/constants";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ export default function BooksPage() {
         <div className="py-10">
           <h1
             className="text-lg font-bold font-mono mb-8"
-            style={{ color: "var(--text-1)" }}
+            style={{ color: VIOLET }}
           >
             Books I&apos;m Reading
           </h1>
@@ -46,7 +47,7 @@ export default function BooksPage() {
                 <div className="flex flex-col justify-center">
                   <p
                     className="text-sm font-bold font-mono mb-1"
-                    style={{ color: "var(--text-1)" }}
+                    style={{ color: VIOLET }}
                   >
                     {book.title}
                   </p>

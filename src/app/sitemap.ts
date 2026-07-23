@@ -1,9 +1,13 @@
 import type { MetadataRoute } from "next";
-import { projects } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const projectRoutes: MetadataRoute.Sitemap = projects.map((p) => ({
-    url: `https://ovalele.in/studio/${p.slug}`,
+  const studioRoutes: MetadataRoute.Sitemap = [
+    "projects",
+    "blog",
+    "books",
+    "extras",
+  ].map((slug) => ({
+    url: `https://ovalele.in/studio/${slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly",
     priority: 0.6,
@@ -22,6 +26,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     },
-    ...projectRoutes,
+    ...studioRoutes,
   ];
 }

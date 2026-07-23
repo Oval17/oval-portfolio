@@ -2,6 +2,7 @@ import Nav from "@/components/nav";
 import StudioNav from "@/components/studio-nav";
 import Footer from "@/components/footer";
 import { extras } from "@/lib/data";
+import { VIOLET } from "@/lib/constants";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -18,7 +19,7 @@ export default function ExtrasPage() {
         <div className="py-10">
           <h1
             className="text-lg font-bold font-mono mb-8"
-            style={{ color: "var(--text-1)" }}
+            style={{ color: VIOLET }}
           >
             Extras
           </h1>
@@ -36,7 +37,7 @@ export default function ExtrasPage() {
                 <div className="flex items-center gap-3 mb-1">
                   <p
                     className="text-sm font-bold font-mono"
-                    style={{ color: "var(--text-1)" }}
+                    style={{ color: VIOLET }}
                   >
                     {extra.name}
                   </p>

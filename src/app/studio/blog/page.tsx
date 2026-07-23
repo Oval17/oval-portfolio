@@ -1,6 +1,7 @@
 import Nav from "@/components/nav";
 import StudioNav from "@/components/studio-nav";
 import Footer from "@/components/footer";
+import { VIOLET } from "@/lib/constants";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -17,7 +18,7 @@ export default function BlogPage() {
         <div className="py-10">
           <h1
             className="text-lg font-bold font-mono mb-3"
-            style={{ color: "var(--text-1)" }}
+            style={{ color: VIOLET }}
           >
             Blog & What I&apos;m Learning
           </h1>
