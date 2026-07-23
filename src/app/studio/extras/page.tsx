@@ -39,10 +39,10 @@ export default function ExtrasPage() {
                 href={extra.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="studio-card flex items-start justify-between gap-4 p-4 rounded-lg"
+                className="studio-card flex flex-wrap items-start gap-x-4 gap-y-2 p-4 rounded-lg"
                 style={{ border: "1px solid var(--border)", background: "var(--bg)" }}
               >
-                <div className="flex items-start gap-3 min-w-0">
+                <div className="flex items-start gap-3 flex-1 min-w-[180px]">
                   <StudioIcon name={extra.icon} />
                   <div className="min-w-0">
                     <p className="text-sm font-bold font-mono mb-0.5" style={{ color: VIOLET }}>
@@ -53,7 +53,7 @@ export default function ExtrasPage() {
                     </p>
                   </div>
                 </div>
-                <div className="shrink-0 self-center flex flex-wrap justify-end gap-1.5">
+                <div className="shrink-0 self-center ml-auto flex flex-wrap justify-end gap-1.5">
                   {extra.tags.map((tag) => (
                     <span
                       key={tag}
