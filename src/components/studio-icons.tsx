@@ -7,8 +7,8 @@ const ICON_PROPS = {
   strokeWidth: 1.6,
   strokeLinecap: "round" as const,
   strokeLinejoin: "round" as const,
-  width: 18,
-  height: 18,
+  width: 24,
+  height: 24,
 };
 
 function PointCloudIcon() {
@@ -81,8 +81,8 @@ export function StudioIcon({ name }: { name: StudioIconKey }) {
   const Icon = STUDIO_ICONS[name];
   return (
     <span
-      className="shrink-0 flex items-center justify-center w-9 h-9 rounded-lg"
-      style={{ background: `${VIOLET}12`, border: `1px solid ${VIOLET}25` }}
+      className="studio-card-icon shrink-0 flex items-center justify-center w-14 h-14 rounded-xl"
+      style={{ background: `${VIOLET}14`, border: `1px solid ${VIOLET}30` }}
     >
       <Icon />
     </span>

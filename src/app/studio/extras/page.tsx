@@ -32,7 +32,7 @@ export default function ExtrasPage() {
                 href={extra.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block p-4 rounded-lg transition-colors"
+                className="studio-card block p-4 rounded-lg"
                 style={{ border: "1px solid var(--border)" }}
               >
                 <div className="flex items-center gap-3 mb-3">

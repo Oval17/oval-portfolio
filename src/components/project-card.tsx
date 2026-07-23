@@ -27,7 +27,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       onKeyDown={(e) => {
         if (e.key === "Enter") window.open(project.liveHref, "_blank", "noopener,noreferrer");
       }}
-      className="flex items-center justify-between gap-4 p-4 rounded-lg cursor-pointer transition-colors"
+      className="studio-card flex items-center justify-between gap-4 p-4 rounded-lg cursor-pointer"
       style={{ border: "1px solid var(--border)" }}
     >
       <div className="flex items-center gap-3 min-w-0">

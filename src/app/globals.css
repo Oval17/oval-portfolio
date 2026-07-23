@@ -13,6 +13,7 @@
   --text-2: #555555;
   --text-3: #999999;
   --dot-color: rgba(0, 0, 0, 0.15);
+  --violet: #9461f7;
 }
 
 :root[class~="dark"] {
@@ -23,6 +24,23 @@
   --text-2: #a0aab4;
   --text-3: #4a5260;
   --dot-color: rgba(255, 255, 255, 0.12);
+}
+
+.studio-card {
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.studio-card:hover {
+  border-color: var(--violet);
+  background: rgba(148, 97, 247, 0.06);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(148, 97, 247, 0.12);
+}
+
+.studio-card:hover .studio-card-icon {
+  background: rgba(148, 97, 247, 0.18);
+  border-color: rgba(148, 97, 247, 0.45);
+  transform: scale(1.06);
 }
 
 @keyframes floatUpDown {
