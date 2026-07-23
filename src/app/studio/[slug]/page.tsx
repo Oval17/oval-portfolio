@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import Nav from "@/components/nav";
 import StudioNav from "@/components/studio-nav";
 import Footer from "@/components/footer";
+import BackLink from "@/components/back-link";
 import { projects } from "@/lib/data";
 import type { Metadata } from "next";
 
@@ -28,13 +28,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <StudioNav />
       <main className="max-w-2xl mx-auto px-6 pb-24">
         <div className="py-10">
-          <Link href="/studio" className="inline-flex items-center gap-1.5 text-xs mb-8 transition-opacity hover:opacity-70"
-            style={{ color: "var(--text-2)" }}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} width={12} height={12}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-            </svg>
-            Studio
-          </Link>
+          <BackLink fallbackHref="/studio/projects" label="Projects" />
 
           <div className="flex items-center gap-3 mb-1.5">
             <h1 className="text-xl font-bold font-mono" style={{ color: "var(--text-1)", letterSpacing: "-0.01em" }}>

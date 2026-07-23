@@ -147,7 +147,7 @@ export default function StudioNav() {
           borderStyle: "solid",
         }}
       >
-        <NavIcon href="/" label="Back home" active={false}>
+        <NavIcon href="/studio" label="Studio home" active={pathname === "/studio"}>
           <HomeIcon />
         </NavIcon>
 

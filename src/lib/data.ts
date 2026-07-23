@@ -64,6 +64,30 @@ export const education = [
   },
 ];
 
+export const books = [
+  {
+    title: "Ikigai",
+    author: "Héctor García & Francesc Miralles",
+    tagline: "The Japanese Secret to a Long and Happy Life",
+    cover: "/books/ikigai.jpg",
+  },
+  {
+    title: "The Psychology of Money",
+    author: "Morgan Housel",
+    tagline: "Timeless Lessons on Wealth, Greed, and Happiness",
+    cover: "/books/psychology-of-money.jpg",
+  },
+];
+
+export const extras = [
+  {
+    name: "Dice Roller 3D",
+    tagline: "Roll realistic 3D d6, d12, and d20 dice with smooth animation — right in your browser.",
+    tags: ["Chrome Extension"],
+    href: "https://chromewebstore.google.com/detail/dice-roller-3d/pgmfjoabbcalpnfhcldghciflmbmffgd",
+  },
+];
+
 export const projects = [
   {
     slug: "point-cloud-data-viewer",
