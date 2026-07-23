@@ -11,7 +11,7 @@ export default function Nav() {
   useEffect(() => setMounted(true), []);
   const isDark = theme === "dark";
   const pathname = usePathname();
-  const isStudio = pathname === "/studio";
+  const isHome = pathname === "/";
 
   return (
     <header>
@@ -32,7 +32,7 @@ export default function Nav() {
             >
               My Studio
             </Link>
-            {!isStudio && (
+            {isHome && (
               <div style={{ position: "absolute", right: "calc(100% + 10px)", top: "50%", transform: "translateY(-50%)", pointerEvents: "none" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "6px", animation: "floatUpDown 2s ease-in-out infinite" }}>
                   <span style={{

@@ -1,8 +1,9 @@
-import Link from "next/link";
 import Nav from "@/components/nav";
 import StudioNav from "@/components/studio-nav";
 import Footer from "@/components/footer";
+import ProjectCard from "@/components/project-card";
 import { projects } from "@/lib/data";
+import { VIOLET } from "@/lib/constants";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,56 +16,25 @@ export default function ProjectsPage() {
     <>
       <Nav />
       <StudioNav />
-      <main className="max-w-2xl mx-auto px-6 pb-8">
+      <main className="relative max-w-2xl mx-auto px-6 pb-8">
+        <div
+          className="absolute inset-0 -z-10"
+          style={{
+            backgroundImage: "radial-gradient(circle, var(--dot-color, rgba(0,0,0,0.12)) 1px, transparent 1px)",
+            backgroundSize: "24px 24px",
+          }}
+        />
         <div className="py-10">
           <h1
             className="text-lg font-bold font-mono mb-8"
-            style={{ color: "var(--text-1)" }}
+            style={{ color: VIOLET }}
           >
             Projects
           </h1>
 
-          <div className="space-y-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {projects.map((project) => (
-              <Link
-                key={project.slug}
-                href={`/studio/${project.slug}`}
-                className="block p-4 rounded-lg transition-colors"
-                style={{ border: "1px solid var(--border)" }}
-              >
-                <div className="flex items-center gap-3 mb-1">
-                  <p
-                    className="text-sm font-bold font-mono"
-                    style={{ color: "var(--text-1)" }}
-                  >
-                    {project.name}
-                  </p>
-                  <span
-                    className="text-xs font-mono"
-                    style={{ color: "var(--text-3)" }}
-                  >
-                    {project.year}
-                  </span>
-                </div>
-                <p className="text-sm mb-3" style={{ color: "var(--text-2)" }}>
-                  {project.tagline}
-                </p>
-                <div className="flex flex-wrap gap-1.5">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs px-2 py-0.5 rounded-md font-mono"
-                      style={{
-                        background: "var(--surface)",
-                        color: "var(--text-2)",
-                        border: "1px solid var(--border)",
-                      }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </Link>
+              <ProjectCard key={project.name} project={project} />
             ))}
           </div>
         </div>

@@ -13,12 +13,14 @@ const LINES = [
 
 const CHAR_SPEED = 12;   // ms per character
 const LINE_GAP   = 80;   // ms pause between lines
+const INTRO_SEEN_KEY = "oval-studio-intro-seen";
 
-function useTypingSequence(lines: string[]) {
+function useTypingSequence(lines: string[], enabled: boolean) {
   const [rendered, setRendered] = useState<string[]>([]);
   const [done, setDone] = useState(false);
 
   useEffect(() => {
+    if (!enabled) return;
     let cancelled = false;
 
     async function run() {
@@ -40,7 +42,8 @@ function useTypingSequence(lines: string[]) {
 
     run();
     return () => { cancelled = true; };
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [enabled]);
 
   return { rendered, done };
 }
@@ -48,10 +51,21 @@ function useTypingSequence(lines: string[]) {
 const FADE_OUT_MS = 600;
 
 export default function StudioHero({ onRevealed }: { onRevealed?: () => void }) {
-  const { rendered, done } = useTypingSequence(LINES);
+  const [skipIntro, setSkipIntro] = useState<boolean | null>(null);
+  const { rendered, done } = useTypingSequence(LINES, skipIntro === false);
   const [terminalFading, setTerminalFading] = useState(false);
   const [terminalGone, setTerminalGone] = useState(false);
   const [showTitle, setShowTitle] = useState(false);
+
+  useEffect(() => {
+    setSkipIntro(sessionStorage.getItem(INTRO_SEEN_KEY) === "1");
+  }, []);
+
+  useEffect(() => {
+    if (skipIntro !== true) return;
+    setTerminalGone(true);
+    setShowTitle(true);
+  }, [skipIntro]);
 
   useEffect(() => {
     if (!done) return;
@@ -73,6 +87,7 @@ export default function StudioHero({ onRevealed }: { onRevealed?: () => void }) 
 
   useEffect(() => {
     if (!showTitle) return;
+    sessionStorage.setItem(INTRO_SEEN_KEY, "1");
     onRevealed?.();
   }, [showTitle, onRevealed]);
 
@@ -84,7 +99,7 @@ export default function StudioHero({ onRevealed }: { onRevealed?: () => void }) 
   return (
     <div className="py-10" style={{ fontFamily: "var(--font-geist-mono)" }}>
       {/* ── Terminal window ── */}
-      {!terminalGone && (
+      {skipIntro === false && !terminalGone && (
         <div
           style={{
             background: "var(--bg)",
@@ -192,6 +207,8 @@ export default function StudioHero({ onRevealed }: { onRevealed?: () => void }) 
             textAlign: "center",
           }}
         >
+          <StudioNav />
+
           <h1
             className={showTitle ? "studio-title" : ""}
             style={{
@@ -202,13 +219,11 @@ export default function StudioHero({ onRevealed }: { onRevealed?: () => void }) 
               margin: 0,
               fontFamily: "var(--font-press-start)",
               fontWeight: 400,
-              marginBottom: "28px",
+              marginTop: "28px",
             }}
           >
             OVAL STUDIO
           </h1>
-
-          <StudioNav />
         </div>
       )}
     </div>
