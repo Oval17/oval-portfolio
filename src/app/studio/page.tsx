@@ -1,6 +1,6 @@
 import Nav from "@/components/nav";
 import Footer from "@/components/footer";
-import StudioHero from "@/components/studio-hero";
+import StudioBody from "@/components/studio-body";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,29 +10,21 @@ export const metadata: Metadata = {
 
 export default function WorkPage() {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Nav />
-      <main className="max-w-2xl mx-auto px-6 pb-8">
-        <StudioHero />
-
+      <main className="relative flex-1 max-w-2xl w-full mx-auto px-6 pb-8">
         <div
-          className="py-20 text-center"
-          style={{ borderTop: "1px solid var(--border)" }}
-        >
-          <p className="text-sm font-mono" style={{ color: "var(--text-3)" }}>
-            coming soon.
-          </p>
-          <p
-            className="text-xs font-mono mt-1"
-            style={{ color: "var(--text-3)", opacity: 0.5 }}
-          >
-            building something here.
-          </p>
-        </div>
+          className="absolute inset-0 -z-10"
+          style={{
+            backgroundImage: "radial-gradient(circle, var(--dot-color, rgba(0,0,0,0.12)) 1px, transparent 1px)",
+            backgroundSize: "24px 24px",
+          }}
+        />
+        <StudioBody />
       </main>
-      <div className="max-w-2xl mx-auto px-6">
+      <div className="max-w-2xl mx-auto px-6 w-full">
         <Footer />
       </div>
-    </>
+    </div>
   );
 }

@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Nav from "@/components/nav";
+import StudioNav from "@/components/studio-nav";
 import Footer from "@/components/footer";
 import { projects } from "@/lib/data";
 import type { Metadata } from "next";
@@ -9,19 +10,22 @@ export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const project = projects.find((p) => p.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
   if (!project) return {};
   return { title: `${project.name} — Anurag`, description: project.tagline };
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const project = projects.find((p) => p.slug === params.slug);
+export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
   if (!project) notFound();
 
   return (
     <>
       <Nav />
+      <StudioNav />
       <main className="max-w-2xl mx-auto px-6 pb-24">
         <div className="py-10">
           <Link href="/studio" className="inline-flex items-center gap-1.5 text-xs mb-8 transition-opacity hover:opacity-70"
