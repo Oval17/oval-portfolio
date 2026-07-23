@@ -3,6 +3,7 @@ import StudioNav from "@/components/studio-nav";
 import Footer from "@/components/footer";
 import { extras } from "@/lib/data";
 import { VIOLET } from "@/lib/constants";
+import { StudioIcon } from "@/components/studio-icons";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -34,7 +35,8 @@ export default function ExtrasPage() {
                 className="block p-4 rounded-lg transition-colors"
                 style={{ border: "1px solid var(--border)" }}
               >
-                <div className="flex items-center gap-3 mb-1">
+                <div className="flex items-center gap-3 mb-3">
+                  <StudioIcon name={extra.icon} />
                   <p
                     className="text-sm font-bold font-mono"
                     style={{ color: VIOLET }}

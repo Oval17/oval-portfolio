@@ -1,9 +1,10 @@
 "use client";
 import { VIOLET } from "@/lib/constants";
+import { StudioIcon, type StudioIconKey } from "@/components/studio-icons";
 
 type Project = {
   name: string;
-  logo: string;
+  icon: StudioIconKey;
   tagline: string;
   liveHref: string;
   codeHref: string;
@@ -30,9 +31,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       style={{ border: "1px solid var(--border)" }}
     >
       <div className="flex items-center gap-3 min-w-0">
-        <span className="text-xl shrink-0" aria-hidden>
-          {project.logo}
-        </span>
+        <StudioIcon name={project.icon} />
         <div className="min-w-0">
           <p className="text-sm font-bold font-mono mb-0.5" style={{ color: VIOLET }}>
             {project.name}

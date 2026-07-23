@@ -82,6 +82,7 @@ export const books = [
 export const extras = [
   {
     name: "Dice Roller 3D",
+    icon: "dice" as const,
     tagline: "Roll realistic 3D d6, d12, and d20 dice with smooth animation — right in your browser.",
     tags: ["Chrome Extension"],
     href: "https://chromewebstore.google.com/detail/dice-roller-3d/pgmfjoabbcalpnfhcldghciflmbmffgd",
@@ -91,28 +92,28 @@ export const extras = [
 export const projects = [
   {
     name: "point-cloud-data-viewer",
-    logo: "🌐",
+    icon: "point-cloud" as const,
     tagline: "3D point cloud visualization in the browser.",
     liveHref: "https://pcd-viewer.netlify.app/",
     codeHref: "https://github.com/Oval17/point-cloud-data-viewer",
   },
   {
     name: "konva-drawboard",
-    logo: "🎨",
+    icon: "canvas" as const,
     tagline: "A collaborative drawing board for the web.",
     liveHref: "https://konva-drawboard.netlify.app/",
     codeHref: "https://github.com/Oval17/konva-drawboard",
   },
   {
     name: "Corg-Labs",
-    logo: "🐾",
+    icon: "chip" as const,
     tagline: "C-based tools for image viewing and file compression.",
     liveHref: "https://github.com/Corg-Labs",
     codeHref: "https://github.com/Corg-Labs",
   },
   {
     name: "stagger-view",
-    logo: "🖼️",
+    icon: "image-stack" as const,
     tagline: "Optimized image loading using service workers.",
     liveHref: "https://stagger-view.netlify.app/",
     codeHref: "https://github.com/Oval17/stagger-view",
