@@ -83,6 +83,16 @@ export const books = [
   },
 ];
 
+export const posts = [
+  {
+    slug: "gsoc-2026-final-submission",
+    title: "Bootstrap 2 → 5: my GSoC '26 with Learning Unlimited",
+    tagline: "Four phases, one theming system, and what happens after the coding period ends.",
+    date: "Aug 2026",
+    readTime: "9 min read",
+  },
+];
+
 export const extras = [
   {
     name: "Dice Roller 3D",
