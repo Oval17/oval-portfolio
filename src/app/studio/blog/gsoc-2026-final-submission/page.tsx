@@ -185,19 +185,21 @@ export default function GsocBlogPost() {
         <article className="pb-10">
           {/* intro */}
           <P>
-            Learning Unlimited chapters run Splash-style programs — weekend-long courses where
-            college students teach middle and high schoolers who sign up for classes off a
-            catalog. Multiple chapters run this every year on one shared codebase,{" "}
+            Learning Unlimited is a national nonprofit that empowers college students to create
+            educational programs for younger learners — student-led events and courses spanning
+            everything from rocket science to poetry. Multiple chapters run those programs every
+            year on one shared codebase,{" "}
             <PRLink href={REPO}>ESP-Website</PRLink>.
           </P>
           <P>
-            My project was the layer underneath all six bundled themes — the theming system that
+            My project was the layer underneath the bundled themes — the theming system that
             lets each chapter give its program a distinct look. It was still on Bootstrap 2.3.2,
             a release from 2013, hand-rolled LESS, sprite icons that break on retina displays, and
             enough contrast failures to fail a WCAG audit outright. GSoC &apos;26&apos;s coding
             period runs May 26 through August 23 — I used it to walk that pipeline up to
-            Bootstrap 5, wire in Bootswatch so chapters get real theme choice out of the box, and
-            not take a single live chapter site down doing it.
+            Bootstrap 5, migrate the three major themes (droplets, fruitsalad, and bigpicture),
+            wire in Bootswatch so chapters get real theme choice out of the box, and not take a
+            single live chapter site down doing it.
           </P>
 
           {/* stat terminal block */}
@@ -327,14 +329,11 @@ export default function GsocBlogPost() {
           </P>
           <P>
             That&apos;s the plan going forward: stay on as a maintainer for the theming system,
-            not a summer contributor to it. Bootstrap will ship minor releases, Bootswatch will
-            ship new themes, and someone has to keep the cascade order right so a chapter&apos;s
-            custom variables don&apos;t silently stop applying. I want to be that someone — get
-            properly involved in how ESP-Website actually cuts and ships releases, not just merge
-            code into it, and push on follow-ups like a live theme preview in the editor and an
-            automated accessibility check in CI. Learning Unlimited is genuinely useful software
-            running programs for tens of thousands of students a year. This was never meant to be
-            a one-summer thing.
+            not a summer contributor to it. I want to get properly involved in how ESP-Website
+            actually cuts and ships releases, not just merge code into it, and push on follow-ups
+            like a live theme preview in the editor and an automated accessibility check in CI.
+            Learning Unlimited is genuinely useful software — chapters have reached over 50,000
+            students since 2007. This was never meant to be a one-summer thing.
           </P>
 
           <div style={{ height: "1px", background: "var(--border)" }} className="my-8" />
