@@ -250,9 +250,8 @@ export default function GsocBlogPost() {
             registration form validation — and the one that mattered most for student class
             registration, upgrading Knockout.js 2.3.0 → 3.5.1 and Select2 3.4.3 → 4.1.0 (
             <PRLink href={pr(4209)}>#4209</PRLink>
-            ), the two packages that power that flow. Beyond authoring, I also reviewed 50+ PRs
-            across different domains of the codebase. By the time my proposal was due, I
-            wasn&apos;t guessing at it anymore.
+            ), the two packages that power that flow. By the time my proposal was due, I
+            wasn&apos;t guessing at the codebase anymore.
           </P>
 
           {/* GSOC PERIOD */}
@@ -308,7 +307,8 @@ export default function GsocBlogPost() {
             at every merge, and — because apparently once you&apos;re in <code>controllers.py</code>{" "}
             every week, people notice — a side quest shipping{" "}
             <PRLink href={pr(5865)}>recurring class scheduling</PRLink> for the AJAX scheduler,
-            closing three long-open issues along the way. Thanks to Katherine Brumberg and Will
+            closing three long-open issues along the way. Beyond authoring, I also reviewed 50+
+            PRs across different domains of the codebase. Thanks to Katherine Brumberg and Will
             Gearty for mentoring through all of it.
           </P>
 
