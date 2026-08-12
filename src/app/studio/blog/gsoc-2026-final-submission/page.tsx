@@ -247,10 +247,10 @@ export default function GsocBlogPost() {
             closing WCAG label gaps on the Custom Form Creation page, adding pytest-django and
             pytest-xdist so the suite could run in parallel, fixing a theme-editor crash on
             nested image directories, decoding a stray LaTeX byte-string bug, tightening
-            registration form validation — and the one that mattered most for what came after:
-            <PRLink href={pr(4209)}> upgrading Knockout.js 2.3.0 → 3.5.1 and Select2 3.4.3 → 4.1.0</PRLink>
-            , because the theme editor&apos;s UI runs on both, and Select2 3.x simply doesn&apos;t
-            have the API Phase 4 was going to need. By the time my proposal was due, I
+            registration form validation — and the one that mattered most for student class
+            registration, upgrading Knockout.js 2.3.0 → 3.5.1 and Select2 3.4.3 → 4.1.0 (
+            <PRLink href={pr(4209)}>#4209</PRLink>
+            ), the two packages that power that flow. By the time my proposal was due, I
             wasn&apos;t guessing at the codebase anymore.
           </P>
 
@@ -307,7 +307,8 @@ export default function GsocBlogPost() {
             at every merge, and — because apparently once you&apos;re in <code>controllers.py</code>{" "}
             every week, people notice — a side quest shipping{" "}
             <PRLink href={pr(5865)}>recurring class scheduling</PRLink> for the AJAX scheduler,
-            closing three long-open issues along the way. Thanks to Katherine Brumberg and Will
+            closing three long-open issues along the way. Beyond authoring, I also reviewed 50+
+            PRs across different domains of the codebase. Thanks to Katherine Brumberg and Will
             Gearty for mentoring through all of it.
           </P>
 
