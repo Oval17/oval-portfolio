@@ -247,12 +247,11 @@ export default function GsocBlogPost() {
             closing WCAG label gaps on the Custom Form Creation page, adding pytest-django and
             pytest-xdist so the suite could run in parallel, fixing a theme-editor crash on
             nested image directories, decoding a stray LaTeX byte-string bug, tightening
-            registration form validation — and the one that mattered most for student class
-            registration,{" "}
+            registration form validation — and the one that mattered most,{" "}
             <PRLink href={pr(4209)}>upgrading Knockout.js 2.3.0 → 3.5.1 and Select2 3.4.3 → 4.1.0</PRLink>
-            , the two packages that power that flow. Beyond authoring, I also reviewed 50+ PRs
-            across different domains of the codebase. By the time my proposal was due, I
-            wasn&apos;t guessing at it anymore.
+            {" "}for student class registration, the two packages that power that flow. Beyond
+            authoring, I also reviewed 50+ PRs across different domains of the codebase. By the
+            time my proposal was due, I wasn&apos;t guessing at it anymore.
           </P>
 
           {/* GSOC PERIOD */}
