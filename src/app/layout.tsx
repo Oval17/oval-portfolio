@@ -12,12 +12,12 @@ const pressStart2P = Press_Start_2P({ variable: "--font-press-start", subsets: [
 
 export const metadata: Metadata = {
   title: "Anurag Singh - Oval",
-  description: "Software engineer. Building Oval Studio. SDE-1 at TELUS Digital AI. GSoC '24 & '26 contributor. Physics grad who writes code.",
+  description: "Software engineer. Building Oval Studio. MTS-1 at TELUS Digital AI. GSoC '24 & '26 contributor. Physics grad who writes code.",
   authors: [{ name: "Anurag Singh", url: "https://github.com/Oval17" }],
-  twitter: { card: "summary_large_image", creator: "@Oval170", title: "Anurag Singh - Oval", description: "Software engineer. Building Oval Studio. SDE-1 at TELUS Digital AI. GSoC '24 & '26 contributor." },
+  twitter: { card: "summary_large_image", creator: "@Oval170", title: "Anurag Singh - Oval", description: "Software engineer. Building Oval Studio. MTS-1 at TELUS Digital AI. GSoC '24 & '26 contributor." },
   openGraph: {
     title: "Anurag Singh - Oval",
-    description: "Software engineer. Building Oval Studio. SDE-1 at TELUS Digital AI. GSoC '24 & '26 contributor. Physics grad who writes code.",
+    description: "Software engineer. Building Oval Studio. MTS-1 at TELUS Digital AI. GSoC '24 & '26 contributor. Physics grad who writes code.",
     url: "https://ovalele.in",
     siteName: "Anurag Singh - Oval",
     type: "website",
@@ -36,9 +36,10 @@ const jsonLd = {
   sameAs: [
     "https://github.com/Oval17",
     "https://x.com/Oval170",
+    "https://www.linkedin.com/in/anurag-singh-118a3b43a",
   ],
   jobTitle: "Software Engineer",
-  description: "Software engineer. Building Oval Studio. SDE-1 at TELUS Digital AI. GSoC '24 & '26 contributor.",
+  description: "Software engineer. Building Oval Studio. MTS-1 at TELUS Digital AI. GSoC '24 & '26 contributor.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

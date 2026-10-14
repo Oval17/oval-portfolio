@@ -66,13 +66,14 @@ export default function StudioHighlights({ revealed }: { revealed: boolean }) {
             $ cat focus.md
           </div>
           <p style={{ color: "var(--text-1)", marginBottom: "22px" }}>
-            Deep in{" "}
-            <span style={{ color: VIOLET, fontWeight: 600 }}>math, ML, and deep learning</span>{" "}
-            right now.
-          </p>
-
-          <p style={{ marginBottom: "22px" }}>
-            <HighlightLink href="/studio/projects">→ see the projects I&apos;m building</HighlightLink>
+            Shipping{" "}
+            <span style={{ color: VIOLET, fontWeight: 600 }}>apps, web apps &amp; personalised software</span>,
+            building{" "}
+            <span style={{ color: VIOLET, fontWeight: 600 }}>finance bots</span>,
+            orchestrating{" "}
+            <span style={{ color: VIOLET, fontWeight: 600 }}>agentic workflows</span>, and{" "}
+            <span style={{ color: VIOLET, fontWeight: 600 }}>consulting</span>{" "}
+            for teams working with AI.
           </p>
 
           <div style={{ color: "var(--text-2)", fontSize: "12px", marginBottom: "8px" }}>

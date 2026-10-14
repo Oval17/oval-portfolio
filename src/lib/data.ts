@@ -9,25 +9,27 @@ export const personal = {
     twitter: "https://x.com/Oval170",
     youtube: "https://youtube.com/@ovalcodes",
     instagram: "https://www.instagram.com/oval.codes/",
+    linkedin: "https://www.linkedin.com/in/anurag-singh-118a3b43a",
     email: "mailto:oval17.contact@gmail.com",
   },
 };
 
 export const experience = [
   {
-    company: "TELUS Digital AI",
-    role: "SDE - 1",
-    type: "Hybrid",
-    period: "Jul 2026 - Present",
-    description:
-      "Core member of GTS Frontend Team, working on integrating AI tools and Frontend.",
-  },
-  {
     company: "Oval Studio",
     role: "Builder in Chief",
     type: "Vibing",
     period: "Jul 2026 - Present",
-    description: "Building new things everyday.",
+    description:
+      "Building apps, web apps, finance bots, and personalised software end to end. Orchestrating agentic workflows that put AI to real work, and consulting teams on shipping it.",
+  },
+  {
+    company: "TELUS Digital AI",
+    role: "MTS-1",
+    type: "Hybrid",
+    period: "Jul 2026 - Present",
+    description:
+      "Core member of GTS Frontend Team, working on integrating AI tools and Frontend.",
   },
   {
     company: "GSoC '26",
@@ -39,7 +41,7 @@ export const experience = [
   },
   {
     company: "TELUS Digital AI",
-    role: "SDE Intern",
+    role: "MTS Intern",
     type: "Hybrid",
     period: "Jul 2025 - Jun 2026",
     description:

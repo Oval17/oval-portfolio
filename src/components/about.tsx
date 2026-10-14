@@ -20,7 +20,7 @@ export default function About() {
     <section className="py-8">
       {/* Bio */}
       <div className="space-y-3 text-sm leading-[1.8] mb-10" style={{ color: "var(--text-2)", fontFamily: "var(--font-geist-mono)" }}>
-        <p>I like to build things.</p>
+        <p>I like to build things, and I&apos;m deep into agentic AI, finance, and markets.</p>
         <p>Chronically online.</p>
         <p>Away from the screen: cricket and long walks.</p>
         <p>Check out <Link href="/studio" style={{ color: VIOLET }} className="hover:opacity-70 transition-opacity">Oval Studio</Link>.</p>
