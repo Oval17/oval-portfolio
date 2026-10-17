@@ -1,14 +1,15 @@
 import Nav from "@/components/nav";
 import StudioNav from "@/components/studio-nav";
 import Footer from "@/components/footer";
-import { extras } from "@/lib/data";
+import ProjectCard from "@/components/project-card";
+import { extras, projects } from "@/lib/data";
 import { VIOLET } from "@/lib/constants";
 import { StudioIcon } from "@/components/studio-icons";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Extras — Oval Studio",
-  description: "Other things worth sharing.",
+  description: "A Chrome extension and the mini projects I've built.",
 };
 
 export default function ExtrasPage() {
@@ -31,6 +32,26 @@ export default function ExtrasPage() {
           >
             Extras
           </h1>
+
+          <h2
+            className="text-sm font-bold font-mono mb-4"
+            style={{ color: VIOLET }}
+          >
+            Mini projects
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {projects.map((project) => (
+              <ProjectCard key={project.name} project={project} />
+            ))}
+          </div>
+
+          <h2
+            className="text-sm font-bold font-mono mt-10 mb-4"
+            style={{ color: VIOLET }}
+          >
+            Chrome extension
+          </h2>
 
           <div className="space-y-4">
             {extras.map((extra) => (

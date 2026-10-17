@@ -72,16 +72,36 @@ export const books = [
     author: "Héctor García & Francesc Miralles",
     tagline: "The Japanese Secret to a Long and Happy Life",
     description:
-      "A gentle framework for finding purpose, drawn from the daily habits of Okinawa's longest-living people.",
+      "Finding your reason for being, through the daily habits of Okinawa's longest-living people.",
     cover: "/books/ikigai.jpg",
+    status: "reading" as const,
   },
   {
     title: "The Psychology of Money",
     author: "Morgan Housel",
     tagline: "Timeless Lessons on Wealth, Greed, and Happiness",
     description:
-      "Short, sharp lessons on how behavior, not knowledge, drives most financial outcomes.",
+      "Why behaviour, not knowledge, decides most of our financial outcomes.",
     cover: "/books/psychology-of-money.jpg",
+    status: "reading" as const,
+  },
+  {
+    title: "1984",
+    author: "George Orwell",
+    tagline: "A Novel",
+    description:
+      "A surveillance state where history is rewritten and even thought is a crime.",
+    cover: "/books/1984-orwell.jpg",
+    status: "reading" as const,
+  },
+  {
+    title: "How to Think Like Leonardo da Vinci",
+    author: "Michael J. Gelb",
+    tagline: "Seven Steps to Genius Every Day",
+    description:
+      "Seven of da Vinci's principles, from curiosity to sharp observation, turned into daily practice.",
+    cover: "/books/how-to-think-like-leonardo.jpg",
+    status: "read" as const,
   },
 ];
 

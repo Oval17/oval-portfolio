@@ -24,15 +24,6 @@ function HomeIcon() {
   );
 }
 
-function CodeIcon() {
-  return (
-    <svg {...ICON_PROPS}>
-      <path d="M9 8 4 12l5 4" />
-      <path d="M15 8l5 4-5 4" />
-    </svg>
-  );
-}
-
 function BulbIcon() {
   return (
     <svg {...ICON_PROPS}>
@@ -64,7 +55,6 @@ function BurstIcon() {
 }
 
 const SECTIONS = [
-  { href: "/studio/projects", label: "Projects", Icon: CodeIcon },
   { href: "/studio/blog", label: "Blogs", Icon: BulbIcon },
   { href: "/studio/books", label: "Library", Icon: StackedBooksIcon },
   { href: "/studio/extras", label: "Extras", Icon: BurstIcon },

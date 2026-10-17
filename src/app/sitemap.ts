@@ -2,7 +2,6 @@ import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const studioRoutes: MetadataRoute.Sitemap = [
-    "projects",
     "blog",
     "books",
     "extras",

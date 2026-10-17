@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "My Studio — Anurag",
-  description: "Everything I'm working on — projects, experiments, startups.",
+  description: "Everything I'm working on — writing, reading, and things I've built.",
 };
 
 export default function WorkPage() {
