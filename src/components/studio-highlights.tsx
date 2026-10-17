@@ -106,10 +106,12 @@ export default function StudioHighlights({ revealed }: { revealed: boolean }) {
             ))}
           </Section>
 
-          <Section command="cat latest-post.md">
-            <Arrow />
-            <HighlightLink href={`/studio/blog/${latestPost.slug}`}>{latestPost.title}</HighlightLink>
-          </Section>
+          {latestPost && (
+            <Section command="cat latest-post.md">
+              <Arrow />
+              <HighlightLink href={`/studio/blog/${latestPost.slug}`}>{latestPost.title}</HighlightLink>
+            </Section>
+          )}
 
           <Section command="ls extras/" last>
             <Arrow />

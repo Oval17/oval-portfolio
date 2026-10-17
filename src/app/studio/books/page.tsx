@@ -19,7 +19,7 @@ const SHELVES = [
 function BookCard({ book }: { book: (typeof books)[number] }) {
   return (
     <div
-      className="studio-card group flex gap-4 p-4 rounded-lg"
+      className="studio-card flex gap-4 p-4 rounded-lg"
       style={{ border: "1px solid var(--border)", background: "var(--bg)" }}
     >
       <div

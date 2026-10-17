@@ -9,7 +9,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Extras — Oval Studio",
-  description: "A Chrome extension and the mini projects I've built.",
+  description: "Mini projects I've built, and a Chrome extension.",
 };
 
 export default function ExtrasPage() {
