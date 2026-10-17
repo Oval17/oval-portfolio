@@ -1,6 +1,10 @@
 "use client";
 import Link from "next/link";
 import { VIOLET } from "@/lib/constants";
+import { books, posts, projects } from "@/lib/data";
+
+const latestPost = posts[0];
+const reading = books.filter((book) => book.status === "reading");
 
 function HighlightLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
@@ -12,6 +16,25 @@ function HighlightLink({ href, children }: { href: string; children: React.React
       {children}
     </Link>
   );
+}
+
+function Section({ command, last, children }: { command: string; last?: boolean; children: React.ReactNode }) {
+  return (
+    <div style={{ marginBottom: last ? 0 : "22px" }}>
+      <div style={{ color: "var(--text-2)", fontSize: "12px", marginBottom: "8px" }}>
+        $ {command}
+      </div>
+      <div style={{ color: "var(--text-1)" }}>{children}</div>
+    </div>
+  );
+}
+
+function Arrow() {
+  return <span style={{ color: "var(--text-3)", marginRight: "8px" }}>→</span>;
+}
+
+function Sep() {
+  return <span style={{ color: "var(--text-3)" }}> · </span>;
 }
 
 export default function StudioHighlights({ revealed }: { revealed: boolean }) {
@@ -62,10 +85,7 @@ export default function StudioHighlights({ revealed }: { revealed: boolean }) {
 
         {/* body */}
         <div style={{ padding: "22px 24px", fontSize: "15px", lineHeight: "1.85" }}>
-          <div style={{ color: "var(--text-2)", fontSize: "12px", marginBottom: "10px" }}>
-            $ cat focus.md
-          </div>
-          <p style={{ color: "var(--text-1)", marginBottom: "22px" }}>
+          <Section command="cat focus.md">
             Shipping{" "}
             <span style={{ color: VIOLET, fontWeight: 600 }}>apps, web apps &amp; personalised software</span>,
             building{" "}
@@ -74,14 +94,34 @@ export default function StudioHighlights({ revealed }: { revealed: boolean }) {
             <span style={{ color: VIOLET, fontWeight: 600 }}>agentic workflows</span>, and{" "}
             <span style={{ color: VIOLET, fontWeight: 600 }}>consulting</span>{" "}
             for teams working with AI.
-          </p>
+          </Section>
 
-          <div style={{ color: "var(--text-2)", fontSize: "12px", marginBottom: "8px" }}>
-            $ cat currently-reading.md
-          </div>
-          <p style={{ margin: 0 }}>
-            Currently reading <HighlightLink href="/studio/books">Ikigai</HighlightLink>.
-          </p>
+          <Section command="cat currently-reading.md">
+            <Arrow />
+            {reading.map((book, i) => (
+              <span key={book.title}>
+                {i > 0 && <Sep />}
+                <HighlightLink href="/studio/books">{book.title}</HighlightLink>
+              </span>
+            ))}
+          </Section>
+
+          {latestPost && (
+            <Section command="cat latest-post.md">
+              <Arrow />
+              <HighlightLink href={`/studio/blog/${latestPost.slug}`}>{latestPost.title}</HighlightLink>
+            </Section>
+          )}
+
+          <Section command="ls extras/" last>
+            <Arrow />
+            {projects.map((project, i) => (
+              <span key={project.name}>
+                {i > 0 && <Sep />}
+                <HighlightLink href="/studio/extras">{project.name}</HighlightLink>
+              </span>
+            ))}
+          </Section>
         </div>
       </div>
     </div>
