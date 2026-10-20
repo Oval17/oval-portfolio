@@ -88,8 +88,6 @@ export default function StudioHighlights({ revealed }: { revealed: boolean }) {
           <Section command="cat focus.md">
             Shipping{" "}
             <span style={{ color: VIOLET, fontWeight: 600 }}>apps, web apps &amp; personalised software</span>,
-            building{" "}
-            <span style={{ color: VIOLET, fontWeight: 600 }}>finance bots</span>,
             orchestrating{" "}
             <span style={{ color: VIOLET, fontWeight: 600 }}>agentic workflows</span>, and{" "}
             <span style={{ color: VIOLET, fontWeight: 600 }}>consulting</span>{" "}
