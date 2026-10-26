@@ -21,7 +21,7 @@ export const experience = [
     type: "Vibing",
     period: "Jul 2026 - Present",
     description:
-      "Building apps, web apps, finance bots, and personalised software end to end. Orchestrating agentic workflows that put AI to real work, and consulting teams on shipping it.",
+      "Building apps, web apps, and personalised software end to end. Orchestrating agentic workflows that put AI to real work, and consulting teams on shipping it.",
   },
   {
     company: "TELUS Digital AI",
