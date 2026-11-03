@@ -36,7 +36,6 @@ const jsonLd = {
   sameAs: [
     "https://github.com/Oval17",
     "https://x.com/Oval170",
-    "https://www.linkedin.com/in/anurag-singh-118a3b43a",
   ],
   jobTitle: "Software Engineer",
   description: "Software engineer. Building Oval Studio. MTS-1 at TELUS Digital AI. GSoC '24 & '26 contributor.",
