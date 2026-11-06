@@ -9,6 +9,7 @@ export const personal = {
     twitter: "https://x.com/Oval170",
     youtube: "https://youtube.com/@ovalcodes",
     instagram: "https://www.instagram.com/oval.codes/",
+    linkedin: "https://www.linkedin.com/in/anurag-singh-118a3b43a",
     email: "mailto:oval17.contact@gmail.com",
   },
 };
