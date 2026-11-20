@@ -27,9 +27,9 @@ export const experience = [
     company: "TELUS Digital AI",
     role: "MTS-1",
     type: "Hybrid",
-    period: "Jul 2026 - Present",
+    period: "Jul 2026 - Nov 2026",
     description:
-      "Core member of GTS Frontend Team, working on integrating AI tools and Frontend.",
+      "Core member of GTS Frontend Team, worked on integrating AI tools and Frontend.",
   },
   {
     company: "GSoC '26",
